@@ -1,0 +1,65 @@
+{
+    "key": "group_ers_theme_header",
+    "title": "Theme Header",
+    "fields": [
+        {
+            "key": "field_ers_header_logo",
+            "label": "Logo",
+            "name": "header_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_ers_header_nav_links",
+            "label": "Nav Links",
+            "name": "header_nav_links",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "layout": "table",
+            "button_label": "Add Link",
+            "sub_fields": [
+                {
+                    "key": "field_ers_header_nav_link",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "required": 0,
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_ers_header_primary_cta",
+            "label": "Primary CTA",
+            "name": "header_primary_cta",
+            "type": "link",
+            "instructions": "e.g. Speak to us",
+            "required": 0,
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "ers-theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Global header settings for Elm Risk Solutions.",
+    "show_in_rest": 0,
+    "modified": 1754304000
+}

@@ -1,0 +1,2 @@
+# Keep layouts/ for ACF flexible content partials.
+# Each layout: {layout_name}.php matching ACF layout name.

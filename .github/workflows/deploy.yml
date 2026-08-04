@@ -1,0 +1,37 @@
+name: Deploy to WP Engine
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: elm-risk-solutions/package-lock.json
+
+      - name: Install theme dependencies
+        run: npm ci
+        working-directory: elm-risk-solutions
+
+      - name: Build Tailwind assets
+        run: npm run build
+        working-directory: elm-risk-solutions
+
+      - name: Deploy theme to WP Engine
+        uses: wpengine/github-action-wpe-site-deploy@v3
+        with:
+          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
+          WPE_ENV: elmrisksolustg
+          SRC_PATH: "elm-risk-solutions/"
+          REMOTE_PATH: "wp-content/themes/elm-risk-solutions/"
+          FLAGS: -avz --inplace --delete --exclude-from=elm-risk-solutions/.deployignore
+          CACHE_CLEAR: true
