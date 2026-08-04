@@ -31,7 +31,7 @@ That moves the deploy key into `~/.ssh`, places Cursor conventions under `.curso
 
 ## 2. GitHub repo + Actions secrets
 
-1. Create a private GitHub repo (e.g. `axl-dev/elm-risk-solutions`).
+1. Repo: [aixa-axl/Elm-Risk-Solutions](https://github.com/aixa-axl/Elm-Risk-Solutions).
 2. Push this project to `main`.
 3. Repo ? Settings ? Secrets and variables ? Actions ? New repository secret:
 
