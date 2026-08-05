@@ -40,7 +40,7 @@ $link_title = ! empty( $link['title'] ) ? $link['title'] : '';
 
 		<div class="flex min-w-0 flex-1 flex-col justify-center text-cream lg:max-w-[395px]">
 			<?php if ( $heading ) : ?>
-				<h1 class="m-0 font-display text-[36px] leading-[1.1] tracking-[-2px] text-cream lg:text-[46.667px] lg:tracking-[-2.3333px]">
+				<h1 class="m-0 font-display text-center text-[36px] leading-[1.1] tracking-[-2px] text-cream lg:text-left lg:text-[46.667px] lg:tracking-[-2.3333px]">
 					<?php echo wp_kses_post( $heading ); ?>
 				</h1>
 			<?php endif; ?>
