@@ -369,11 +369,28 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_ers_media_text_section_background",
+                            "label": "Section background",
+                            "name": "section_background",
+                            "type": "select",
+                            "instructions": "Colour behind / between stacked panels. Default white.",
+                            "required": 0,
+                            "choices": {
+                                "white": "White",
+                                "cream": "Cream"
+                            },
+                            "default_value": "white",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1
+                        },
+                        {
                             "key": "field_ers_media_text_background",
-                            "label": "Background",
+                            "label": "Panel background",
                             "name": "background",
                             "type": "select",
-                            "instructions": "Navy, taupe, or brand magenta — reuse this layout for Personal service, aviation, equine, business, etc.",
+                            "instructions": "Navy, taupe, or brand magenta — colour of the content panel.",
                             "required": 0,
                             "choices": {
                                 "brand": "Brand magenta",
@@ -472,5 +489,5 @@
     "active": true,
     "description": "Flexible content sections for Elm Risk Solutions pages.",
     "show_in_rest": 0,
-    "modified": 1754418600
+    "modified": 1754419200
 }

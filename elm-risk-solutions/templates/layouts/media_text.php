@@ -7,13 +7,14 @@
  * Prefer section screenshots over Canva→Figma layer structure.
  */
 
-$image       = get_sub_field( 'image' );
-$heading     = get_sub_field( 'heading' );
-$label       = get_sub_field( 'label' );
-$body        = get_sub_field( 'body' );
-$link        = get_sub_field( 'link' );
-$footer_note = get_sub_field( 'footer_note' );
-$background  = get_sub_field( 'background' );
+$image              = get_sub_field( 'image' );
+$heading            = get_sub_field( 'heading' );
+$label              = get_sub_field( 'label' );
+$body               = get_sub_field( 'body' );
+$link               = get_sub_field( 'link' );
+$footer_note        = get_sub_field( 'footer_note' );
+$background         = get_sub_field( 'background' );
+$section_background = get_sub_field( 'section_background' );
 
 if ( ! $image && ! $heading && ! $label && ! $body && empty( $link['url'] ) && ! $footer_note ) {
 	return;
@@ -26,10 +27,16 @@ $bg_map = array(
 );
 $bg_class = isset( $bg_map[ $background ] ) ? $bg_map[ $background ] : 'bg-header-rule';
 
+$section_bg_map = array(
+	'white' => 'bg-white',
+	'cream' => 'bg-cream',
+);
+$section_bg_class = isset( $section_bg_map[ $section_background ] ) ? $section_bg_map[ $section_background ] : 'bg-white';
+
 $link_title = ! empty( $link['title'] ) ? $link['title'] : '';
 ?>
 
-<section class="ers-media-text bg-white" aria-label="<?php echo esc_attr( $heading ? $heading : __( 'Feature', 'elm-risk-solutions' ) ); ?>">
+<section class="ers-media-text <?php echo esc_attr( $section_bg_class ); ?>" aria-label="<?php echo esc_attr( $heading ? $heading : __( 'Feature', 'elm-risk-solutions' ) ); ?>">
 	<div class="mx-auto w-full max-w-site px-5 py-section lg:px-gutter">
 		<div class="<?php echo esc_attr( $bg_class ); ?> px-5 py-8 text-cream sm:px-8 sm:py-10 lg:px-12 lg:py-14">
 			<div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12 xl:gap-16">
