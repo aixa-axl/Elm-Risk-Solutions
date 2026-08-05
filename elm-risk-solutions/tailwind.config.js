@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         'site-bg': '#FFFFFF',
         ink: '#18243A',
+        cream: '#F4F0E9',
         muted: '#5C5C5C',
         accent: '#8D8175',
         cta: '#8D8175',

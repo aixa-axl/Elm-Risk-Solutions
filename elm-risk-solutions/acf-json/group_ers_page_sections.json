@@ -16,7 +16,58 @@
                 "class": "",
                 "id": ""
             },
-            "layouts": {},
+            "layouts": {
+                "layout_ers_hero": {
+                    "key": "layout_ers_hero",
+                    "name": "hero",
+                    "label": "Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_ers_hero_image",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "Portrait shown in a circular crop on desktop.",
+                            "required": 0,
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_ers_hero_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "textarea",
+                            "instructions": "e.g. Private client insurance, personally handled.",
+                            "required": 0,
+                            "rows": 2,
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_ers_hero_body",
+                            "label": "Body",
+                            "name": "body",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "rows": 4,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_ers_hero_link",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "e.g. Explore our solutions",
+                            "required": 0,
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
             "min": "",
             "max": "",
             "button_label": "Add Section"
@@ -40,5 +91,5 @@
     "active": true,
     "description": "Flexible content sections for Elm Risk Solutions pages.",
     "show_in_rest": 0,
-    "modified": 1754304000
+    "modified": 1754398200
 }
