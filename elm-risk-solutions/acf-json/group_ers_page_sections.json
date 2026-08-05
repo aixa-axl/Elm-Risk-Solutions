@@ -28,7 +28,7 @@
                             "label": "Image",
                             "name": "image",
                             "type": "image",
-                            "instructions": "Portrait shown in a circular crop on desktop.",
+                            "instructions": "Hero photo (rectangular). Shown beside the copy on desktop.",
                             "required": 0,
                             "return_format": "id",
                             "preview_size": "medium",
