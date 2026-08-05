@@ -29,7 +29,7 @@ module.exports = {
       },
       spacing: {
         gutter: '76.8px',
-        section: '120px',
+        section: '80px',
       },
     },
   },

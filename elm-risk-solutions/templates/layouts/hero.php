@@ -25,7 +25,7 @@ $link_title = ! empty( $link['title'] ) ? $link['title'] : ( $is_overlay ? __( '
 <?php if ( $is_overlay ) : ?>
 
 <section class="ers-hero ers-hero--overlay bg-site-bg" aria-label="<?php echo esc_attr__( 'Hero', 'elm-risk-solutions' ); ?>">
-	<div class="mx-auto w-full max-w-site px-5 py-14 lg:px-gutter lg:py-16">
+	<div class="mx-auto w-full max-w-site px-5 py-section lg:px-gutter">
 		<div class="relative flex min-h-[520px] items-end overflow-hidden bg-ink lg:min-h-[675px]">
 			<?php if ( $image ) : ?>
 				<?php
@@ -79,7 +79,7 @@ $link_title = ! empty( $link['title'] ) ? $link['title'] : ( $is_overlay ? __( '
 <?php else : ?>
 
 <section class="ers-hero ers-hero--split bg-site-bg" aria-label="<?php echo esc_attr__( 'Hero', 'elm-risk-solutions' ); ?>">
-	<div class="mx-auto w-full max-w-site px-5 py-14 lg:px-gutter lg:py-16">
+	<div class="mx-auto w-full max-w-site px-5 py-section lg:px-gutter">
 		<div class="bg-ink px-5 py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14">
 			<div class="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16 xl:gap-20">
 				<?php if ( $image ) : ?>

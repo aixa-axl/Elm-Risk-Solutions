@@ -39,7 +39,7 @@ $cta_class = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-
 		?>
 	<?php endif; ?>
 
-	<div class="relative z-10 mx-auto w-full max-w-site px-5 py-16 lg:px-gutter lg:py-[148px]">
+	<div class="relative z-10 mx-auto w-full max-w-site px-5 py-section lg:px-gutter">
 		<div class="mx-auto flex w-full max-w-[862px] flex-col items-center bg-cream px-8 py-12 text-center sm:px-12 sm:py-16 lg:px-16 lg:py-20">
 			<?php if ( $heading ) : ?>
 				<h2 class="m-0 mx-auto max-w-[540px] font-display text-[32px] leading-[1.1] tracking-[-2px] text-black lg:text-[45.667px] lg:tracking-[-2.3333px]">
