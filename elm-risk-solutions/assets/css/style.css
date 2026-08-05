@@ -154,7 +154,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: system-ui, sans-serif;
+  font-family: "Avenir Next", Avenir, Helvetica Neue, system-ui, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -615,12 +615,20 @@ video {
   height: 2rem;
 }
 
+.h-\[55px\] {
+  height: 55px;
+}
+
 .w-auto {
   width: auto;
 }
 
 .w-full {
   width: 100%;
+}
+
+.min-w-\[172px\] {
+  min-width: 172px;
 }
 
 .max-w-none {
@@ -655,6 +663,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
@@ -675,22 +687,36 @@ video {
   border-width: 1px;
 }
 
+.border-b {
+  border-bottom-width: 1px;
+}
+
 .border-t {
   border-top-width: 1px;
 }
 
-.border-ink {
+.border-header-rule {
   --tw-border-opacity: 1;
-  border-color: rgb(26 26 26 / var(--tw-border-opacity, 1));
+  border-color: rgb(161 47 92 / var(--tw-border-opacity, 1));
 }
 
-.border-ink\/10 {
-  border-color: rgb(26 26 26 / 0.1);
+.border-header-rule\/30 {
+  border-color: rgb(161 47 92 / 0.3);
+}
+
+.border-ink {
+  --tw-border-opacity: 1;
+  border-color: rgb(24 36 58 / var(--tw-border-opacity, 1));
+}
+
+.bg-cta {
+  --tw-bg-opacity: 1;
+  background-color: rgb(141 129 117 / var(--tw-bg-opacity, 1));
 }
 
 .bg-ink {
   --tw-bg-opacity: 1;
-  background-color: rgb(26 26 26 / var(--tw-bg-opacity, 1));
+  background-color: rgb(24 36 58 / var(--tw-bg-opacity, 1));
 }
 
 .bg-site-bg {
@@ -727,6 +753,11 @@ video {
   padding-right: 1.25rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -742,14 +773,27 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-\[35px\] {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.font-display {
+  font-family: "IvyOra Display", Georgia, Times New Roman, serif;
+}
+
+.font-sans {
+  font-family: "Avenir Next", Avenir, Helvetica Neue, system-ui, sans-serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl {
@@ -757,9 +801,14 @@ video {
   line-height: 2.25rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.text-nav-cta {
+  font-size: 18.667px;
+  line-height: normal;
+}
+
+.text-nav-link {
+  font-size: 19.333px;
+  line-height: normal;
 }
 
 .text-sm {
@@ -779,13 +828,22 @@ video {
   text-transform: uppercase;
 }
 
+.tracking-\[-1px\] {
+  letter-spacing: -1px;
+}
+
 .tracking-wide {
   letter-spacing: 0.025em;
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
 .text-ink {
   --tw-text-opacity: 1;
-  color: rgb(26 26 26 / var(--tw-text-opacity, 1));
+  color: rgb(24 36 58 / var(--tw-text-opacity, 1));
 }
 
 .text-white {
@@ -844,6 +902,10 @@ body {
   opacity: 0.8;
 }
 
+.hover\:opacity-90:hover {
+  opacity: 0.9;
+}
+
 @media (min-width: 1024px) {
   .lg\:flex {
     display: flex;
@@ -851,6 +913,10 @@ body {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-12 {
+    height: 3rem;
   }
 
   .lg\:flex-row {
@@ -873,5 +939,26 @@ body {
   .lg\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .lg\:py-\[35px\] {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .lg\:text-nav-logo {
+    font-size: 37px;
+    line-height: normal;
+    letter-spacing: -2px;
+  }
+
+  .lg\:tracking-\[-2px\] {
+    letter-spacing: -2px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:gap-14 {
+    gap: 3.5rem;
   }
 }

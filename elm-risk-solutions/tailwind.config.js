@@ -6,14 +6,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Placeholder tokens ? replace from Figma variables when design is locked
         'site-bg': '#FFFFFF',
-        ink: '#1A1A1A',
+        ink: '#18243A',
         muted: '#5C5C5C',
-        accent: '#1A1A1A',
+        accent: '#8D8175',
+        cta: '#8D8175',
+        'header-rule': '#A12F5C',
       },
       fontFamily: {
-        sans: ['system-ui', 'sans-serif'],
+        // Licensed faces when available; Georgia / system fallbacks until self-hosted.
+        sans: ['"Avenir Next"', 'Avenir', 'Helvetica Neue', 'system-ui', 'sans-serif'],
+        display: ['"IvyOra Display"', 'Georgia', 'Times New Roman', 'serif'],
+      },
+      fontSize: {
+        'nav-link': ['19.333px', { lineHeight: 'normal' }],
+        'nav-cta': ['18.667px', { lineHeight: 'normal' }],
+        'nav-logo': ['37px', { lineHeight: 'normal', letterSpacing: '-2px' }],
       },
       maxWidth: {
         site: '1366px',
