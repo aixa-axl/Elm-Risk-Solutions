@@ -29,7 +29,7 @@ $bg_class = isset( $bg_map[ $background ] ) ? $bg_map[ $background ] : 'bg-heade
 $link_title = ! empty( $link['title'] ) ? $link['title'] : '';
 ?>
 
-<section class="ers-media-text bg-cream" aria-label="<?php echo esc_attr( $heading ? $heading : __( 'Feature', 'elm-risk-solutions' ) ); ?>">
+<section class="ers-media-text bg-white" aria-label="<?php echo esc_attr( $heading ? $heading : __( 'Feature', 'elm-risk-solutions' ) ); ?>">
 	<div class="mx-auto w-full max-w-site px-5 py-6 lg:px-gutter lg:py-8">
 		<div class="<?php echo esc_attr( $bg_class ); ?> px-5 py-8 text-cream sm:px-8 sm:py-10 lg:px-12 lg:py-14">
 			<div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12 xl:gap-16">
