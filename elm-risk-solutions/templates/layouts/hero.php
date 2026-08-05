@@ -21,7 +21,7 @@ $link_title = ! empty( $link['title'] ) ? $link['title'] : '';
 	<div class="mx-auto flex w-full max-w-site flex-col gap-10 px-5 py-14 lg:flex-row lg:items-center lg:gap-16 lg:px-gutter lg:py-16">
 		<?php if ( $image ) : ?>
 			<div class="mx-auto w-full max-w-[507px] shrink-0 lg:mx-0 lg:w-[42%]">
-				<div class="aspect-square overflow-hidden rounded-full">
+				<div class="aspect-square overflow-hidden">
 					<?php
 					echo wp_get_attachment_image(
 						$image,
