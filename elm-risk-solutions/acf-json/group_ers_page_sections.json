@@ -66,6 +66,45 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_ers_intro": {
+                    "key": "layout_ers_intro",
+                    "name": "intro",
+                    "label": "Intro",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_ers_intro_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "e.g. Protection shaped around your life",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_intro_body",
+                            "label": "Body",
+                            "name": "body",
+                            "type": "wysiwyg",
+                            "instructions": "Use separate paragraphs for each block of copy.",
+                            "required": 0,
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_ers_intro_link",
+                            "label": "CTA",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "e.g. Discover Elm",
+                            "required": 0,
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -91,5 +130,5 @@
     "active": true,
     "description": "Flexible content sections for Elm Risk Solutions pages.",
     "show_in_rest": 0,
-    "modified": 1754398200
+    "modified": 1754406720
 }
