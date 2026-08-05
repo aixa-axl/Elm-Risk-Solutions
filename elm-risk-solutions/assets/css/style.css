@@ -984,6 +984,11 @@ video {
   padding: 1.5rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1456,6 +1461,10 @@ body {
     width: 48%;
   }
 
+  .lg\:min-w-\[280px\] {
+    min-width: 280px;
+  }
+
   .lg\:min-w-\[393px\] {
     min-width: 393px;
   }
@@ -1638,10 +1647,6 @@ body {
 
   .lg\:text-\[46\.667px\] {
     font-size: 46.667px;
-  }
-
-  .lg\:text-\[47\.667px\] {
-    font-size: 47.667px;
   }
 
   .lg\:text-\[52\.333px\] {
