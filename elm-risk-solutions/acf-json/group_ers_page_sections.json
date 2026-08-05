@@ -248,6 +248,82 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_ers_approach": {
+                    "key": "layout_ers_approach",
+                    "name": "approach",
+                    "label": "Approach",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_ers_approach_label",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "e.g. The Elm approach",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_approach_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "e.g. Advice built around you",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_approach_intro",
+                            "label": "Intro",
+                            "name": "intro",
+                            "type": "textarea",
+                            "required": 0,
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_ers_approach_center_logo",
+                            "label": "Center logo",
+                            "name": "center_logo",
+                            "type": "image",
+                            "instructions": "Small mark at the centre of the crosshair. Leave empty until you have the asset.",
+                            "required": 0,
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_ers_approach_steps",
+                            "label": "Steps",
+                            "name": "steps",
+                            "type": "repeater",
+                            "instructions": "Four steps in reading order: top-left, top-right, bottom-left, bottom-right.",
+                            "required": 0,
+                            "layout": "block",
+                            "button_label": "Add Step",
+                            "max": 4,
+                            "sub_fields": [
+                                {
+                                    "key": "field_ers_approach_step_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "e.g. We listen",
+                                    "required": 0
+                                },
+                                {
+                                    "key": "field_ers_approach_step_body",
+                                    "label": "Body",
+                                    "name": "body",
+                                    "type": "textarea",
+                                    "required": 0,
+                                    "rows": 3,
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -273,5 +349,5 @@
     "active": true,
     "description": "Flexible content sections for Elm Risk Solutions pages.",
     "show_in_rest": 0,
-    "modified": 1754414000
+    "modified": 1754416200
 }
