@@ -115,9 +115,20 @@
                             "label": "CTA",
                             "name": "link",
                             "type": "link",
-                            "instructions": "e.g. Discover Elm",
+                            "instructions": "e.g. Discover Elm. Ignored if an icon is set below.",
                             "required": 0,
                             "return_format": "array"
+                        },
+                        {
+                            "key": "field_ers_intro_icon",
+                            "label": "Icon",
+                            "name": "icon",
+                            "type": "image",
+                            "instructions": "Optional bottom mark instead of the CTA button. Leave empty to use the CTA.",
+                            "required": 0,
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all"
                         }
                     ],
                     "min": "",
@@ -461,5 +472,5 @@
     "active": true,
     "description": "Flexible content sections for Elm Risk Solutions pages.",
     "show_in_rest": 0,
-    "modified": 1754418000
+    "modified": 1754418600
 }
