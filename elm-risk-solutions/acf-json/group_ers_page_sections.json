@@ -28,7 +28,7 @@
                             "label": "Style",
                             "name": "style",
                             "type": "select",
-                            "instructions": "Split = navy panel with image beside copy. Overlay = full-bleed photo with copy at the bottom left.",
+                            "instructions": "Split = navy panel with image beside copy. Overlay = inset photo panel with copy at the bottom left.",
                             "required": 0,
                             "choices": {
                                 "split": "Split (image + copy)",

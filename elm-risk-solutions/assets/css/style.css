@@ -727,8 +727,8 @@ video {
   height: 1px;
 }
 
-.min-h-\[560px\] {
-  min-height: 560px;
+.min-h-\[520px\] {
+  min-height: 520px;
 }
 
 .min-h-\[640px\] {
@@ -1070,12 +1070,16 @@ video {
   padding-bottom: 120px;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pb-12 {
   padding-bottom: 3rem;
 }
 
-.pt-24 {
-  padding-top: 6rem;
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .pt-8 {
@@ -1603,6 +1607,10 @@ body {
     padding-bottom: 35px;
   }
 
+  .lg\:pb-14 {
+    padding-bottom: 3.5rem;
+  }
+
   .lg\:pb-16 {
     padding-bottom: 4rem;
   }
@@ -1611,8 +1619,8 @@ body {
     padding-top: 0px;
   }
 
-  .lg\:pt-32 {
-    padding-top: 8rem;
+  .lg\:pt-28 {
+    padding-top: 7rem;
   }
 
   .lg\:text-right {
