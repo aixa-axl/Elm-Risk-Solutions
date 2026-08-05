@@ -324,6 +324,92 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_ers_media_text": {
+                    "key": "layout_ers_media_text",
+                    "name": "media_text",
+                    "label": "Media + Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_ers_media_text_background",
+                            "label": "Background",
+                            "name": "background",
+                            "type": "select",
+                            "instructions": "Navy, taupe, or brand magenta — reuse this layout for Personal service, aviation, equine, business, etc.",
+                            "required": 0,
+                            "choices": {
+                                "brand": "Brand magenta",
+                                "ink": "Navy",
+                                "taupe": "Taupe"
+                            },
+                            "default_value": "brand",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_ers_media_text_image",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "Shown square-cropped on the left.",
+                            "required": 0,
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_ers_media_text_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "e.g. Personal service / Private aviation",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_media_text_label",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "Optional uppercase line under the heading (e.g. Backed by wider expertise). Leave empty when not needed.",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_media_text_body",
+                            "label": "Body",
+                            "name": "body",
+                            "type": "wysiwyg",
+                            "instructions": "Use separate paragraphs for each block of copy.",
+                            "required": 0,
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_ers_media_text_link",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "e.g. Meet Eleanor → / Discuss aviation insurance →",
+                            "required": 0,
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_ers_media_text_footer_note",
+                            "label": "Footer note",
+                            "name": "footer_note",
+                            "type": "textarea",
+                            "instructions": "Optional full-width line under the columns (e.g. Potential cover may include: …). Leave empty for Personal service.",
+                            "required": 0,
+                            "rows": 3,
+                            "new_lines": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -349,5 +435,5 @@
     "active": true,
     "description": "Flexible content sections for Elm Risk Solutions pages.",
     "show_in_rest": 0,
-    "modified": 1754416200
+    "modified": 1754416800
 }
