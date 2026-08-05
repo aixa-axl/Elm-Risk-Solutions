@@ -554,12 +554,32 @@ video {
   display: none;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .sticky {
   position: sticky;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .z-50 {
@@ -663,6 +683,10 @@ video {
   height: 100%;
 }
 
+.min-h-\[640px\] {
+  min-height: 640px;
+}
+
 .w-\[41px\] {
   width: 41px;
 }
@@ -683,8 +707,16 @@ video {
   min-width: 172px;
 }
 
+.max-w-\[540px\] {
+  max-width: 540px;
+}
+
 .max-w-\[573px\] {
   max-width: 573px;
+}
+
+.max-w-\[588px\] {
+  max-width: 588px;
 }
 
 .max-w-\[592px\] {
@@ -697,6 +729,10 @@ video {
 
 .max-w-\[657px\] {
   max-width: 657px;
+}
+
+.max-w-\[862px\] {
+  max-width: 862px;
 }
 
 .max-w-\[897px\] {
@@ -769,6 +805,12 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -896,6 +938,11 @@ video {
 .py-14 {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .py-2 {
@@ -1211,6 +1258,11 @@ body {
     gap: 4rem;
   }
 
+  .sm\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -1219,6 +1271,11 @@ body {
   .sm\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .sm\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -1257,6 +1314,10 @@ body {
 
   .lg\:h-12 {
     height: 3rem;
+  }
+
+  .lg\:min-h-\[894px\] {
+    min-height: 894px;
   }
 
   .lg\:w-\[48\%\] {
@@ -1319,6 +1380,12 @@ body {
     gap: 2rem;
   }
 
+  .lg\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+  }
+
   .lg\:self-auto {
     align-self: auto;
   }
@@ -1330,6 +1397,11 @@ body {
   .lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .lg\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .lg\:px-gutter {
@@ -1347,6 +1419,16 @@ body {
     padding-bottom: 4rem;
   }
 
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .lg\:py-\[148px\] {
+    padding-top: 148px;
+    padding-bottom: 148px;
+  }
+
   .lg\:py-\[35px\] {
     padding-top: 35px;
     padding-bottom: 35px;
@@ -1358,6 +1440,10 @@ body {
 
   .lg\:text-right {
     text-align: right;
+  }
+
+  .lg\:text-\[20\.333px\] {
+    font-size: 20.333px;
   }
 
   .lg\:text-\[22\.333px\] {
@@ -1392,6 +1478,10 @@ body {
     font-size: 46.667px;
   }
 
+  .lg\:text-\[47\.667px\] {
+    font-size: 47.667px;
+  }
+
   .lg\:text-\[52\.333px\] {
     font-size: 52.333px;
   }
@@ -1404,6 +1494,10 @@ body {
 
   .lg\:leading-\[1\.1\] {
     line-height: 1.1;
+  }
+
+  .lg\:tracking-\[-1\.0667px\] {
+    letter-spacing: -1.0667px;
   }
 
   .lg\:tracking-\[-1\.2px\] {

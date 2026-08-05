@@ -207,6 +207,47 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_ers_feature_panel": {
+                    "key": "layout_ers_feature_panel",
+                    "name": "feature_panel",
+                    "label": "Feature Panel",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_ers_feature_panel_bg",
+                            "label": "Background image",
+                            "name": "background_image",
+                            "type": "image",
+                            "instructions": "Full-bleed background (e.g. fresco). Shown behind the cream panel.",
+                            "required": 0,
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_ers_feature_panel_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "e.g. Your insurance should reflect what you own today",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_feature_panel_body",
+                            "label": "Body",
+                            "name": "body",
+                            "type": "wysiwyg",
+                            "instructions": "Use separate paragraphs for each block of copy.",
+                            "required": 0,
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -232,5 +273,5 @@
     "active": true,
     "description": "Flexible content sections for Elm Risk Solutions pages.",
     "show_in_rest": 0,
-    "modified": 1754409000
+    "modified": 1754414000
 }
