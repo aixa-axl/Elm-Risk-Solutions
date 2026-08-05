@@ -24,11 +24,28 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_ers_hero_style",
+                            "label": "Style",
+                            "name": "style",
+                            "type": "select",
+                            "instructions": "Split = navy panel with image beside copy. Overlay = full-bleed photo with copy at the bottom left.",
+                            "required": 0,
+                            "choices": {
+                                "split": "Split (image + copy)",
+                                "overlay": "Overlay (full-bleed background)"
+                            },
+                            "default_value": "split",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1
+                        },
+                        {
                             "key": "field_ers_hero_image",
                             "label": "Image",
                             "name": "image",
                             "type": "image",
-                            "instructions": "Hero photo (rectangular). Shown beside the copy on desktop.",
+                            "instructions": "Split: photo beside the copy. Overlay: full-bleed background photo.",
                             "required": 0,
                             "return_format": "id",
                             "preview_size": "medium",
@@ -39,7 +56,7 @@
                             "label": "Heading",
                             "name": "heading",
                             "type": "textarea",
-                            "instructions": "e.g. Private client insurance, personally handled.",
+                            "instructions": "e.g. Private client insurance… / Protection shaped around your life",
                             "required": 0,
                             "rows": 2,
                             "new_lines": "br"
@@ -59,7 +76,7 @@
                             "label": "Link",
                             "name": "link",
                             "type": "link",
-                            "instructions": "e.g. Explore our solutions",
+                            "instructions": "e.g. Explore our solutions → / Speak to us →",
                             "required": 0,
                             "return_format": "array"
                         }
@@ -444,5 +461,5 @@
     "active": true,
     "description": "Flexible content sections for Elm Risk Solutions pages.",
     "show_in_rest": 0,
-    "modified": 1754417400
+    "modified": 1754418000
 }
