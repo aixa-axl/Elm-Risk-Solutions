@@ -583,16 +583,28 @@ video {
   margin-bottom: 2rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
-.mt-auto {
-  margin-top: auto;
+.mt-4 {
+  margin-top: 1rem;
 }
 
-.inline-block {
-  display: inline-block;
+.mt-auto {
+  margin-top: auto;
 }
 
 .flex {
@@ -611,12 +623,24 @@ video {
   height: 2.5rem;
 }
 
-.h-8 {
-  height: 2rem;
+.h-\[41px\] {
+  height: 41px;
 }
 
 .h-\[55px\] {
   height: 55px;
+}
+
+.h-\[70px\] {
+  height: 70px;
+}
+
+.w-\[29px\] {
+  width: 29px;
+}
+
+.w-\[41px\] {
+  width: 41px;
 }
 
 .w-auto {
@@ -629,6 +653,14 @@ video {
 
 .min-w-\[172px\] {
   min-width: 172px;
+}
+
+.max-w-\[657px\] {
+  max-width: 657px;
+}
+
+.max-w-\[924px\] {
+  max-width: 924px;
 }
 
 .max-w-none {
@@ -663,16 +695,20 @@ video {
   justify-content: space-between;
 }
 
+.gap-0 {
+  gap: 0px;
+}
+
 .gap-10 {
   gap: 2.5rem;
 }
 
-.gap-3 {
-  gap: 0.75rem;
-}
-
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-6 {
@@ -681,6 +717,10 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.self-end {
+  align-self: flex-end;
 }
 
 .border {
@@ -693,6 +733,10 @@ video {
 
 .border-t {
   border-top-width: 1px;
+}
+
+.border-t-\[3px\] {
+  border-top-width: 3px;
 }
 
 .border-header-rule {
@@ -734,6 +778,11 @@ video {
      object-fit: contain;
 }
 
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .object-left {
   -o-object-position: left;
      object-position: left;
@@ -758,11 +807,6 @@ video {
   padding-right: 1.5rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -783,6 +827,18 @@ video {
   padding-bottom: 35px;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pt-\[77px\] {
+  padding-top: 77px;
+}
+
 .font-display {
   font-family: "IvyOra Display", Georgia, Times New Roman, serif;
 }
@@ -799,6 +855,30 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-\[12px\] {
+  font-size: 12px;
+}
+
+.text-\[17\.667px\] {
+  font-size: 17.667px;
+}
+
+.text-\[18\.333px\] {
+  font-size: 18.333px;
+}
+
+.text-\[20\.333px\] {
+  font-size: 20.333px;
+}
+
+.text-\[25\.667px\] {
+  font-size: 25.667px;
+}
+
+.text-\[28px\] {
+  font-size: 28px;
 }
 
 .text-nav-cta {
@@ -820,20 +900,44 @@ video {
   font-weight: 700;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .uppercase {
   text-transform: uppercase;
+}
+
+.leading-\[1\.1\] {
+  line-height: 1.1;
+}
+
+.leading-\[1\.3\] {
+  line-height: 1.3;
+}
+
+.tracking-\[-0\.9333px\] {
+  letter-spacing: -0.9333px;
+}
+
+.tracking-\[-1\.0667px\] {
+  letter-spacing: -1.0667px;
+}
+
+.tracking-\[-1\.2px\] {
+  letter-spacing: -1.2px;
+}
+
+.tracking-\[-1\.3333px\] {
+  letter-spacing: -1.3333px;
+}
+
+.tracking-\[-1\.5px\] {
+  letter-spacing: -1.5px;
 }
 
 .tracking-\[-1px\] {
   letter-spacing: -1px;
 }
 
-.tracking-wide {
-  letter-spacing: 0.025em;
+.tracking-\[-3\.2px\] {
+  letter-spacing: -3.2px;
 }
 
 .text-black {
@@ -851,14 +955,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.text-white\/70 {
-  color: rgb(255 255 255 / 0.7);
-}
-
-.text-white\/80 {
-  color: rgb(255 255 255 / 0.8);
-}
-
 .no-underline {
   text-decoration-line: none;
 }
@@ -868,13 +964,77 @@ video {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.opacity-100 {
+  opacity: 1;
+}
+
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-/* Custom styles ? keep tokens in tailwind.config.js */
+/* Self-hosted brand fonts (paths relative to assets/css/style.css) */
+
+@font-face {
+  font-family: 'Avenir Next';
+
+  src: url('../fonts/AvenirNext-Regular.otf') format('opentype');
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+
+  src: url('../fonts/AvenirNext-RegularItalic.otf') format('opentype');
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+
+  src: url('../fonts/AvenirNext-Medium.otf') format('opentype');
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IvyOra Display';
+
+  src: url('../fonts/IvyOraDisplay-Regular.ttf') format('truetype');
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IvyOra Display';
+
+  src: url('../fonts/IvyOraDisplay-Medium.ttf') format('truetype');
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
+}
 
 html {
   scroll-behavior: smooth;
@@ -890,10 +1050,6 @@ body {
   flex: 1 0 auto;
 }
 
-.hover\:opacity-100:hover {
-  opacity: 1;
-}
-
 .hover\:opacity-70:hover {
   opacity: 0.7;
 }
@@ -906,7 +1062,25 @@ body {
   opacity: 0.9;
 }
 
+@media (min-width: 640px) {
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:gap-16 {
+    gap: 4rem;
+  }
+}
+
 @media (min-width: 1024px) {
+  .lg\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
+  .lg\:mt-16 {
+    margin-top: 4rem;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -919,6 +1093,14 @@ body {
     height: 3rem;
   }
 
+  .lg\:max-w-\[316px\] {
+    max-width: 316px;
+  }
+
+  .lg\:shrink-0 {
+    flex-shrink: 0;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -927,8 +1109,32 @@ body {
     align-items: flex-start;
   }
 
+  .lg\:items-end {
+    align-items: flex-end;
+  }
+
+  .lg\:items-center {
+    align-items: center;
+  }
+
   .lg\:justify-between {
     justify-content: space-between;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
+  }
+
+  .lg\:gap-16 {
+    gap: 4rem;
+  }
+
+  .lg\:gap-24 {
+    gap: 6rem;
+  }
+
+  .lg\:self-auto {
+    align-self: auto;
   }
 
   .lg\:px-gutter {
@@ -936,20 +1142,35 @@ body {
     padding-right: 76.8px;
   }
 
-  .lg\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
   .lg\:py-\[35px\] {
     padding-top: 35px;
     padding-bottom: 35px;
+  }
+
+  .lg\:pb-16 {
+    padding-bottom: 4rem;
+  }
+
+  .lg\:text-right {
+    text-align: right;
+  }
+
+  .lg\:text-\[26\.667px\] {
+    font-size: 26.667px;
+  }
+
+  .lg\:text-\[33\.333px\] {
+    font-size: 33.333px;
   }
 
   .lg\:text-nav-logo {
     font-size: 37px;
     line-height: normal;
     letter-spacing: -2px;
+  }
+
+  .lg\:tracking-\[-1\.6667px\] {
+    letter-spacing: -1.6667px;
   }
 
   .lg\:tracking-\[-2px\] {

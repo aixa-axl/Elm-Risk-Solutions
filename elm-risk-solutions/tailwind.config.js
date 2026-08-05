@@ -14,7 +14,7 @@ module.exports = {
         'header-rule': '#A12F5C',
       },
       fontFamily: {
-        // Licensed faces when available; Georgia / system fallbacks until self-hosted.
+        // Self-hosted in assets/fonts/ via @font-face in src/input.css
         sans: ['"Avenir Next"', 'Avenir', 'Helvetica Neue', 'system-ui', 'sans-serif'],
         display: ['"IvyOra Display"', 'Georgia', 'Times New Roman', 'serif'],
       },

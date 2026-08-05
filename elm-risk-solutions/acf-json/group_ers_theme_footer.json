@@ -3,44 +3,51 @@
     "title": "Theme Footer",
     "fields": [
         {
-            "key": "field_ers_footer_logo",
-            "label": "Logo",
-            "name": "footer_logo",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "return_format": "id",
-            "preview_size": "medium",
-            "library": "all"
-        },
-        {
             "key": "field_ers_footer_tagline",
             "label": "Tagline",
             "name": "footer_tagline",
+            "type": "textarea",
+            "instructions": "Large display line on the left (e.g. Personal advice and specialist insurance\u2026).",
+            "required": 0,
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_ers_footer_phone",
+            "label": "Phone",
+            "name": "footer_phone",
             "type": "text",
+            "instructions": "e.g. +44 (0)161 838 6790",
+            "required": 0
+        },
+        {
+            "key": "field_ers_footer_email",
+            "label": "Email",
+            "name": "footer_email",
+            "type": "email",
             "instructions": "",
             "required": 0
         },
         {
-            "key": "field_ers_footer_copyright",
-            "label": "Copyright suffix",
-            "name": "footer_copyright",
+            "key": "field_ers_footer_primary_heading",
+            "label": "Primary column heading",
+            "name": "footer_primary_heading",
             "type": "text",
-            "instructions": "Optional text after the year. Leave empty for default.",
+            "instructions": "Defaults to site name if empty.",
             "required": 0
         },
         {
-            "key": "field_ers_footer_nav_links",
-            "label": "Nav Links",
-            "name": "footer_nav_links",
+            "key": "field_ers_footer_primary_links",
+            "label": "Primary column links",
+            "name": "footer_primary_links",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "About us, Insurance solutions, Contact us, etc.",
             "required": 0,
             "layout": "table",
             "button_label": "Add Link",
             "sub_fields": [
                 {
-                    "key": "field_ers_footer_nav_link",
+                    "key": "field_ers_footer_primary_link",
                     "label": "Link",
                     "name": "link",
                     "type": "link",
@@ -48,6 +55,79 @@
                     "return_format": "array"
                 }
             ]
+        },
+        {
+            "key": "field_ers_footer_info_heading",
+            "label": "Further information heading",
+            "name": "footer_info_heading",
+            "type": "text",
+            "instructions": "Defaults to \u201cFurther information\u201d if empty.",
+            "required": 0,
+            "default_value": "Further information"
+        },
+        {
+            "key": "field_ers_footer_info_links",
+            "label": "Further information links",
+            "name": "footer_info_links",
+            "type": "repeater",
+            "instructions": "Privacy, cookies, terms, etc.",
+            "required": 0,
+            "layout": "table",
+            "button_label": "Add Link",
+            "sub_fields": [
+                {
+                    "key": "field_ers_footer_info_link",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "required": 0,
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_ers_footer_badge",
+            "label": "Accreditation badge",
+            "name": "footer_badge",
+            "type": "image",
+            "instructions": "Vertical badge image (e.g. ELM mark).",
+            "required": 0,
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_ers_footer_badge_label",
+            "label": "Badge label",
+            "name": "footer_badge_label",
+            "type": "text",
+            "instructions": "Small label under the badge. Defaults to ELM.",
+            "required": 0,
+            "default_value": "ELM"
+        },
+        {
+            "key": "field_ers_footer_legal",
+            "label": "Legal / regulatory text",
+            "name": "footer_legal",
+            "type": "textarea",
+            "instructions": "Company registration and FCA wording below the divider.",
+            "required": 0,
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_ers_footer_instagram_url",
+            "label": "Instagram URL",
+            "name": "footer_instagram_url",
+            "type": "url",
+            "required": 0
+        },
+        {
+            "key": "field_ers_footer_linkedin_url",
+            "label": "LinkedIn URL",
+            "name": "footer_linkedin_url",
+            "type": "url",
+            "required": 0
         }
     ],
     "location": [
@@ -68,5 +148,5 @@
     "active": true,
     "description": "Global footer settings for Elm Risk Solutions.",
     "show_in_rest": 0,
-    "modified": 1754304000
+    "modified": 1754397000
 }
