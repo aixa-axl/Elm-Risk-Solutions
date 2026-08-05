@@ -105,6 +105,108 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_ers_solutions_grid": {
+                    "key": "layout_ers_solutions_grid",
+                    "name": "solutions_grid",
+                    "label": "Solutions Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_ers_solutions_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "e.g. Personal insurance solutions for the life you lead",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_solutions_label",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "e.g. Our expertise",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_solutions_intro",
+                            "label": "Intro",
+                            "name": "intro",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_ers_solutions_cards",
+                            "label": "Cards",
+                            "name": "cards",
+                            "type": "repeater",
+                            "instructions": "Typically 9 cards in a 3×3 grid. Use dark background on the last card if needed.",
+                            "required": 0,
+                            "layout": "block",
+                            "button_label": "Add Card",
+                            "sub_fields": [
+                                {
+                                    "key": "field_ers_solutions_card_image",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "type": "image",
+                                    "required": 0,
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "library": "all"
+                                },
+                                {
+                                    "key": "field_ers_solutions_card_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "text",
+                                    "required": 0
+                                },
+                                {
+                                    "key": "field_ers_solutions_card_body",
+                                    "label": "Body",
+                                    "name": "body",
+                                    "type": "textarea",
+                                    "required": 0,
+                                    "rows": 3,
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_ers_solutions_card_link",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "link",
+                                    "instructions": "e.g. Explore our solutions →",
+                                    "required": 0,
+                                    "return_format": "array"
+                                },
+                                {
+                                    "key": "field_ers_solutions_card_dark",
+                                    "label": "Dark background",
+                                    "name": "dark_background",
+                                    "type": "true_false",
+                                    "instructions": "Use navy instead of taupe (e.g. Business insurance).",
+                                    "required": 0,
+                                    "default_value": 0,
+                                    "ui": 1
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_ers_solutions_cta",
+                            "label": "Bottom CTA",
+                            "name": "cta",
+                            "type": "link",
+                            "instructions": "e.g. View all insurance solutions",
+                            "required": 0,
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -130,5 +232,5 @@
     "active": true,
     "description": "Flexible content sections for Elm Risk Solutions pages.",
     "show_in_rest": 0,
-    "modified": 1754406720
+    "modified": 1754409000
 }
