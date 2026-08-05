@@ -23,12 +23,10 @@ $has_primary_links = is_array( $footer_primary_links ) && ! empty( $footer_prima
 $has_info_links    = is_array( $footer_info_links ) && ! empty( $footer_info_links );
 $primary_heading   = $footer_primary_heading ? $footer_primary_heading : get_bloginfo( 'name' );
 $info_heading      = $footer_info_heading ? $footer_info_heading : __( 'Further information', 'elm-risk-solutions' );
-$badge_label       = $footer_badge_label ? $footer_badge_label : __( 'ELM', 'elm-risk-solutions' );
 
-$theme_uri   = get_template_directory_uri();
-$ig_src      = $theme_uri . '/assets/images/footer/instagram.svg';
+$theme_uri    = get_template_directory_uri();
+$ig_src       = $theme_uri . '/assets/images/footer/instagram.svg';
 $linkedin_src = $theme_uri . '/assets/images/footer/linkedin.svg';
-$badge_fallback = $theme_uri . '/assets/images/footer/badge.png';
 
 $link_class = 'font-sans text-[20.333px] leading-[1.3] tracking-[-1.0667px] text-white no-underline transition-opacity hover:opacity-70';
 ?>
@@ -118,31 +116,17 @@ $link_class = 'font-sans text-[20.333px] leading-[1.3] tracking-[-1.0667px] text
 							'medium',
 							false,
 							array(
-								'class'   => 'h-[70px] w-[29px] object-cover',
-								'alt'     => $badge_label,
+								'class'   => 'h-[70px] w-auto object-contain',
+								'alt'     => $footer_badge_label ? $footer_badge_label : __( 'Accreditation', 'elm-risk-solutions' ),
 								'loading' => 'lazy',
-								'width'   => 29,
-								'height'  => 70,
 							)
 						);
 						?>
-						<span class="mt-2 font-display text-[12px] leading-[1.1] tracking-[-3.2px] text-white">
-							<?php echo esc_html( $badge_label ); ?>
-						</span>
-					</div>
-				<?php else : ?>
-					<div class="flex flex-col items-center self-end lg:self-auto">
-						<img
-							src="<?php echo esc_url( $badge_fallback ); ?>"
-							alt="<?php echo esc_attr( $badge_label ); ?>"
-							width="29"
-							height="70"
-							class="h-[70px] w-[29px] object-cover"
-							loading="lazy"
-						>
-						<span class="mt-2 font-display text-[12px] leading-[1.1] tracking-[-3.2px] text-white">
-							<?php echo esc_html( $badge_label ); ?>
-						</span>
+						<?php if ( $footer_badge_label ) : ?>
+							<span class="mt-2 font-display text-[12px] leading-[1.1] tracking-[-3.2px] text-white">
+								<?php echo esc_html( $footer_badge_label ); ?>
+							</span>
+						<?php endif; ?>
 					</div>
 				<?php endif; ?>
 			</div>
