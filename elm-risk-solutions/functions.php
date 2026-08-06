@@ -40,10 +40,18 @@ function ers_enqueue_assets() {
 	$css_version           = file_exists( $compiled_css_abs_path ) ? filemtime( $compiled_css_abs_path ) : $theme_version;
 	$js_version            = file_exists( $main_js_abs_path ) ? filemtime( $main_js_abs_path ) : $theme_version;
 
+	// Load after Fluent Forms public CSS when that plugin is active.
+	$style_deps = array();
+	foreach ( array( 'fluent-form-styles', 'fluentform-public-css', 'ff-form-styles' ) as $handle ) {
+		if ( wp_style_is( $handle, 'registered' ) || wp_style_is( $handle, 'enqueued' ) ) {
+			$style_deps[] = $handle;
+		}
+	}
+
 	wp_enqueue_style(
 		'ers-style',
 		$compiled_css_uri,
-		array(),
+		$style_deps,
 		$css_version
 	);
 
@@ -55,7 +63,7 @@ function ers_enqueue_assets() {
 		true
 	);
 }
-add_action( 'wp_enqueue_scripts', 'ers_enqueue_assets' );
+add_action( 'wp_enqueue_scripts', 'ers_enqueue_assets', 100 );
 
 /**
  * ACF JSON save/load paths ? field groups live in the repo.
