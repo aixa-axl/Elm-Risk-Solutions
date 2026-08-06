@@ -523,6 +523,33 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_ers_enquiry_form": {
+                    "key": "layout_ers_enquiry_form",
+                    "name": "enquiry_form",
+                    "label": "Enquiry Form",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_ers_enquiry_form_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "e.g. How can we help?",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_enquiry_form_shortcode",
+                            "label": "Fluent Forms shortcode",
+                            "name": "form_shortcode",
+                            "type": "text",
+                            "instructions": "Paste the Fluent Forms shortcode, e.g. [fluentform id=\"1\"]. Build fields in Fluent Forms (name, email, phone, area of interest, message, privacy checkbox, submit). Use a two-column row for email + telephone.",
+                            "required": 0,
+                            "placeholder": "[fluentform id=\"1\"]"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_ers_media_text": {
                     "key": "layout_ers_media_text",
                     "name": "media_text",

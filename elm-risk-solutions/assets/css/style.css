@@ -1388,6 +1388,111 @@ body {
   padding-bottom: 80px;
 }
 
+/*
+ * Enquiry form (Fluent Forms) — navy panel, cream fields, brand submit.
+ * Field layout (columns etc.) is configured in Fluent Forms.
+ */
+
+.ers-enquiry-form__panel .fluentform,
+.ers-enquiry-form__panel .frm-fluent-form {
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", system-ui, sans-serif;
+}
+
+.ers-enquiry-form__panel .ff-el-input--label,
+.ers-enquiry-form__panel .ff-el-input--label label,
+.ers-enquiry-form__panel .ff-el-form-check-label {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+@media (min-width: 1024px) {
+  .ers-enquiry-form__panel .ff-el-input--label,
+  .ers-enquiry-form__panel .ff-el-input--label label {
+    font-size: 25px;
+    letter-spacing: -1.2px;
+  }
+
+  .ers-enquiry-form__panel .ff-el-form-check-label {
+    font-size: 18.667px;
+    letter-spacing: -0.9333px;
+  }
+}
+
+.ers-enquiry-form__panel .ff-el-input--label label {
+  margin-bottom: 0.35rem;
+}
+
+.ers-enquiry-form__panel .ff-el-form-control,
+.ers-enquiry-form__panel select.ff-el-form-control,
+.ers-enquiry-form__panel textarea.ff-el-form-control {
+  background-color: #f4f0e9;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #18243a;
+  font-family: inherit;
+  font-size: 16px;
+  height: 56px;
+  padding: 0.75rem 1rem;
+}
+
+.ers-enquiry-form__panel textarea.ff-el-form-control {
+  height: auto;
+  min-height: 136px;
+  resize: vertical;
+}
+
+.ers-enquiry-form__panel .ff-el-form-control:focus {
+  background-color: #f4f0e9;
+  border: none;
+  box-shadow: none;
+  outline: 2px solid #8d8175;
+  outline-offset: 0;
+}
+
+.ers-enquiry-form__panel .ff-el-form-check {
+  align-items: flex-start;
+  color: #fff;
+}
+
+.ers-enquiry-form__panel .ff-el-form-check-input {
+  margin-top: 0.2em;
+}
+
+.ers-enquiry-form__panel .ff-btn-submit,
+.ers-enquiry-form__panel .ff-btn.ff-btn-submit {
+  background-color: #a12f5c !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", system-ui, sans-serif;
+  font-size: 18.667px;
+  font-weight: 400;
+  letter-spacing: normal;
+  min-height: 55px;
+  min-width: 197px;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+
+.ers-enquiry-form__panel .ff-btn-submit:hover,
+.ers-enquiry-form__panel .ff-btn-submit:focus,
+.ers-enquiry-form__panel .ff-btn.ff-btn-submit:hover,
+.ers-enquiry-form__panel .ff-btn.ff-btn-submit:focus {
+  background-color: #a12f5c !important;
+  color: #fff !important;
+  opacity: 0.9;
+}
+
+.ers-enquiry-form__panel .ff-message-success {
+  color: #f4f0e9;
+}
+
 .hover\:opacity-70:hover {
   opacity: 0.7;
 }

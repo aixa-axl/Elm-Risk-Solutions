@@ -50,12 +50,15 @@ That moves the deploy key into `~/.ssh`, places Cursor conventions under `.curso
 2. Appearance ? Themes ? activate **Elm Risk Solutions**.
 3. Install plugins on staging (upload / WP Engine plugin install ? **not** in git):
    - **ACF Pro** ? Custom Fields ? Updates ? enter license key
+   - **Fluent Forms** (enquiry form ? submissions under Fluent Forms ? Entries)
    - Yoast SEO (optional)
-   - WP Mail SMTP (when forms go live)
+   - WP Mail SMTP (optional ? only when you want email alerts on new enquiries)
 4. Custom Fields ? Field Groups ? **Sync** `Page Sections`, `Theme Header`, `Theme Footer` if prompted.
 5. Settings ? Permalinks ? Post name ? Save.
 
 Do **not** commit the ACF Pro zip or license key.
+
+**Enquiry form:** Create the form in Fluent Forms (full name, email, telephone, area of interest, message, privacy checkbox, Send enquiry). Put email + telephone in a two-column container. Paste the shortcode into the **Enquiry Form** page section. Without SMTP, check **Fluent Forms ? Entries** for submissions ? email notifications are unreliable until WP Mail SMTP (or similar) is configured.
 
 ---
 
