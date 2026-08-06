@@ -105,7 +105,7 @@ body {
 
 /*
  * Approach → Media + Text: keep Approach’s grid spacing intact; only remove
- * the Media + Text top padding and use a moderate Approach bottom gap.
+ * the Media + Text top padding. Approach bottom: 40px mobile / 80px desktop.
  */
 .ers-approach:has(+ .ers-media-text) > div {
   padding-bottom: 40px !important;
@@ -134,7 +134,7 @@ body {
   }
 
   .ers-approach:has(+ .ers-media-text) > div {
-    padding-bottom: 40px !important;
+    padding-bottom: 80px !important;
   }
 
   .ers-approach + .ers-media-text {
