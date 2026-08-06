@@ -1387,12 +1387,29 @@ body {
 }
 
 /*
- * Media + Text: 80px above first / below last; 50px between stacked panels
+ * Section vertical padding: 40px mobile, 80px desktop.
+ * Overrides the Tailwind spacing token so all py-section layouts match.
+ */
+
+.py-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 1024px) {
+  .py-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+/*
+ * Media + Text: 40/80px above first / below last; 50px between stacked panels
  * (insurance solutions page).
  */
 
 .ers-media-text {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 0;
 }
 
@@ -1401,7 +1418,17 @@ body {
 }
 
 .ers-media-text:not(:has(+ .ers-media-text)) {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 1024px) {
+  .ers-media-text {
+    padding-top: 80px;
+  }
+
+  .ers-media-text:not(:has(+ .ers-media-text)) {
+    padding-bottom: 80px;
+  }
 }
 
 /*
