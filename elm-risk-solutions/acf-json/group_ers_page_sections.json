@@ -602,6 +602,44 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_ers_legal_content": {
+                    "key": "layout_ers_legal_content",
+                    "name": "legal_content",
+                    "label": "Legal Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_ers_legal_content_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "Page title, e.g. Accessibility statement / Cookies / Terms of use",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_legal_content_label",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "Optional uppercase line under the title (e.g. Our commitment). Leave empty on Cookies / Terms if not needed.",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_legal_content_body",
+                            "label": "Body",
+                            "name": "body",
+                            "type": "wysiwyg",
+                            "instructions": "Full page copy. Use Heading 2 for section titles (Using this website, etc.). Paragraphs, lists, and links are supported.",
+                            "required": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_ers_media_text": {
                     "key": "layout_ers_media_text",
                     "name": "media_text",
