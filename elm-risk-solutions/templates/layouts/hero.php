@@ -21,11 +21,8 @@ if ( ! $image && ! $heading && ! $body && empty( $link['url'] ) ) {
 $is_overlay = ( 'overlay' === $style );
 $link_title = ! empty( $link['title'] ) ? $link['title'] : ( $is_overlay ? __( 'Speak to us →', 'elm-risk-solutions' ) : __( 'Explore our solutions →', 'elm-risk-solutions' ) );
 
-// Scrim for cream text on light photos. Contact Us always; elsewhere via ACF toggle.
-$darken_image = (bool) get_sub_field( 'darken_image' );
-if ( ! $darken_image && $is_overlay && is_page( array( 'contact', 'contact-us', 'contactus' ) ) ) {
-	$darken_image = true;
-}
+// Scrim so cream text stays readable on light hero photos (all overlay heroes).
+$darken_image = $is_overlay || (bool) get_sub_field( 'darken_image' );
 ?>
 
 <?php if ( $is_overlay ) : ?>
