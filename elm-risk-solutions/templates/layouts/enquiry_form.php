@@ -15,7 +15,7 @@ if ( ! $heading && ! $form_shortcode ) {
 ?>
 
 <section class="ers-enquiry-form bg-cream" aria-label="<?php echo esc_attr( $heading ? $heading : __( 'Enquiry form', 'elm-risk-solutions' ) ); ?>">
-	<div class="mx-auto w-full max-w-site px-5 py-section lg:px-gutter">
+	<div class="mx-auto w-full max-w-site px-8 py-section sm:px-12 lg:px-24 xl:px-32">
 		<?php if ( $heading ) : ?>
 			<h2 class="m-0 mx-auto max-w-[500px] text-center font-display text-[36px] leading-[1.1] tracking-[-2px] text-black lg:text-[45.667px] lg:tracking-[-2.3333px]">
 				<?php echo esc_html( $heading ); ?>
