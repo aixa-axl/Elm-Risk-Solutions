@@ -427,9 +427,11 @@
                                     "key": "field_ers_expect_item_title",
                                     "label": "Title",
                                     "name": "title",
-                                    "type": "text",
-                                    "instructions": "e.g. Personal attention",
-                                    "required": 0
+                                    "type": "textarea",
+                                    "instructions": "Use a line break to control wrapping, e.g. Wider\\nexpertise",
+                                    "required": 0,
+                                    "rows": 2,
+                                    "new_lines": ""
                                 },
                                 {
                                     "key": "field_ers_expect_item_body",

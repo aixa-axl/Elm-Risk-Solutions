@@ -46,8 +46,20 @@ if ( ! $label && ! $heading && ! $has_items ) {
 					?>
 					<li class="flex flex-col items-center text-center lg:items-start lg:text-left">
 						<?php if ( $title ) : ?>
+							<?php
+							$title_normalized = str_replace( array( "\r\n", "\r" ), "\n", $title );
+							$title_flat       = trim( preg_replace( '/\s+/u', ' ', $title_normalized ) );
+
+							if ( preg_match( '/^(Wider)\s+(expertise)$/i', $title_flat, $parts ) ) {
+								$title_html = esc_html( $parts[1] ) . '<br />' . esc_html( $parts[2] );
+							} elseif ( false !== strpos( $title_normalized, "\n" ) ) {
+								$title_html = nl2br( esc_html( $title_normalized ) );
+							} else {
+								$title_html = esc_html( $title_normalized );
+							}
+							?>
 							<h3 class="m-0 min-h-[2.2em] font-sans text-[20px] uppercase leading-[1.1] tracking-[-1.3333px] text-ink lg:text-[27.667px]">
-								<?php echo esc_html( $title ); ?>
+								<?php echo $title_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped above. ?>
 							</h3>
 						<?php endif; ?>
 
