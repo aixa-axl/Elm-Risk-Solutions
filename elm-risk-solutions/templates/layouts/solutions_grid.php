@@ -73,7 +73,7 @@ $cta_class = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-
 						<?php endif; ?>
 
 						<?php if ( $title ) : ?>
-							<h3 class="mt-6 m-0 font-display text-[32px] leading-[1.1] tracking-[-2px] text-white lg:mt-8 lg:text-[40px]">
+							<h3 class="mt-6 m-0 max-w-[11ch] font-display text-[32px] leading-[1.1] tracking-[-2px] text-white lg:mt-8 lg:text-[40px]">
 								<?php echo esc_html( $title ); ?>
 							</h3>
 						<?php endif; ?>
