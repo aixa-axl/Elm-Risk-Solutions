@@ -74,6 +74,14 @@ body {
 }
 
 /*
+ * Intro → overlay Hero: drop the hero’s top padding so the shared white
+ * strip isn’t doubled. Other Intro / Hero placements stay unchanged.
+ */
+.ers-intro + .ers-hero--overlay > div {
+  padding-top: 0;
+}
+
+/*
  * Media + Text: 40/80px above first / below last; 50px between stacked panels
  * (insurance solutions page).
  */
