@@ -25,7 +25,7 @@ $cta_class      = 'inline-flex h-[55px] min-w-[172px] items-center justify-cente
 	<?php wp_body_open(); ?>
 
 	<header id="masthead" class="site-header sticky top-0 z-50 border-b border-header-rule bg-white" data-mobile-nav>
-		<div class="mx-auto flex w-full max-w-site items-center justify-between gap-6 px-5 py-[35px] lg:px-gutter lg:py-[35px]">
+		<div class="mx-auto flex w-full max-w-site items-center justify-between gap-6 px-5 py-5 lg:px-gutter lg:py-6">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="shrink-0 no-underline">
 				<?php if ( $header_logo ) : ?>
 					<?php
