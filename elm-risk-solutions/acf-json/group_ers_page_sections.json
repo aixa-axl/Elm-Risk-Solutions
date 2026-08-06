@@ -215,8 +215,11 @@
                                     "key": "field_ers_solutions_card_title",
                                     "label": "Title",
                                     "name": "title",
-                                    "type": "text",
-                                    "required": 0
+                                    "type": "textarea",
+                                    "instructions": "Use line breaks to control wrapping, e.g. Homes, property\\nand contents",
+                                    "required": 0,
+                                    "rows": 3,
+                                    "new_lines": ""
                                 },
                                 {
                                     "key": "field_ers_solutions_card_body",
