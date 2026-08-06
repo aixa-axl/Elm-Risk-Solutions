@@ -102,7 +102,7 @@ $cta_class = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-
 		<?php endif; ?>
 
 		<?php if ( ! empty( $cta['url'] ) ) : ?>
-			<div class="mt-12 flex justify-center lg:mt-16">
+			<div class="mt-12 flex justify-center lg:mt-16 whitespace-nowrap">
 				<?php
 				ers_render_link(
 					$cta,
