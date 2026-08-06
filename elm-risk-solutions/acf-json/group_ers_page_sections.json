@@ -716,9 +716,11 @@
                             "key": "field_ers_media_text_heading",
                             "label": "Heading",
                             "name": "heading",
-                            "type": "text",
-                            "instructions": "e.g. Personal service / Private aviation",
-                            "required": 0
+                            "type": "textarea",
+                            "instructions": "Use a line break to control wrapping, e.g. Founded by\\nEleanor Moore",
+                            "required": 0,
+                            "rows": 3,
+                            "new_lines": ""
                         },
                         {
                             "key": "field_ers_media_text_label",

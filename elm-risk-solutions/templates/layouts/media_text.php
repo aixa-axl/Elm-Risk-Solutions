@@ -66,7 +66,7 @@ $link_title = ! empty( $link['title'] ) ? $link['title'] : '';
 				<div class="flex min-w-0 flex-1 flex-col lg:max-w-[420px] lg:pt-0">
 					<?php if ( $heading ) : ?>
 						<h2 class="m-0 font-display text-[36px] leading-[1.1] tracking-[-2px] text-cream lg:text-[45.667px] lg:tracking-[-2.3333px] <?php echo esc_attr( $heading_align ); ?>">
-							<?php echo esc_html( $heading ); ?>
+							<?php echo nl2br( esc_html( $heading ) ); ?>
 						</h2>
 					<?php endif; ?>
 
