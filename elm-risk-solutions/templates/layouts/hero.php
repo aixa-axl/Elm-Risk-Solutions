@@ -97,18 +97,20 @@ if ( ! $darken_image && $is_overlay && is_page( array( 'contact', 'contact-us', 
 			<div class="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16 xl:gap-20">
 				<?php if ( $image ) : ?>
 					<div class="w-full shrink-0 lg:w-[48%] xl:w-[507px]">
-						<?php
-						echo wp_get_attachment_image(
-							$image,
-							'large',
-							false,
-							array(
-								'class'         => 'h-auto w-full object-cover',
-								'fetchpriority' => 'high',
-								'loading'       => 'eager',
-							)
-						);
-						?>
+						<div class="aspect-square overflow-hidden">
+							<?php
+							echo wp_get_attachment_image(
+								$image,
+								'large',
+								false,
+								array(
+									'class'         => 'h-full w-full object-cover',
+									'fetchpriority' => 'high',
+									'loading'       => 'eager',
+								)
+							);
+							?>
+						</div>
 					</div>
 				<?php endif; ?>
 
