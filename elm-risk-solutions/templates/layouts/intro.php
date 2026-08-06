@@ -41,7 +41,7 @@ $cta_class = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-
 		<?php endif; ?>
 
 		<?php if ( $body ) : ?>
-			<div class="mt-8 max-w-[704px] space-y-6 font-sans text-[20px] leading-[1.35] tracking-[-1px] text-ink lg:mt-10 lg:text-[24px] lg:leading-[1.1] lg:tracking-[-1.2px] [&_p]:m-0">
+			<div class="mt-8 max-w-[704px] space-y-6 font-sans text-[20px] leading-[1.35] tracking-[-1px] text-ink lg:mt-10 lg:text-[18px] lg:leading-[1.1] lg:tracking-[-1.2px] [&_p]:m-0">
 				<?php echo wp_kses_post( $body ); ?>
 			</div>
 		<?php endif; ?>

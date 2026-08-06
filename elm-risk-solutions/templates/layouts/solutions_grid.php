@@ -37,7 +37,7 @@ $cta_class = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-
 			<?php endif; ?>
 
 			<?php if ( $intro ) : ?>
-				<p class="mt-4 m-0 max-w-[592px] font-sans text-[18px] leading-[1.35] tracking-[-1px] text-ink lg:mt-5 lg:text-[24px] lg:leading-[1.1] lg:tracking-[-1.2px]">
+				<p class="mt-4 m-0 max-w-[592px] font-sans text-[18px] leading-[1.35] tracking-[-1px] text-ink lg:mt-5 lg:text-[18px] lg:leading-[1.1] lg:tracking-[-1.2px]">
 					<?php echo esc_html( $intro ); ?>
 				</p>
 			<?php endif; ?>
@@ -79,7 +79,7 @@ $cta_class = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-
 						<?php endif; ?>
 
 						<?php if ( $body ) : ?>
-							<p class="mt-4 m-0 flex-1 font-sans text-[18px] leading-[1.35] tracking-[-1px] text-white lg:text-[24px] lg:leading-[1.1] lg:tracking-[-1.2px]">
+							<p class="mt-4 m-0 flex-1 font-sans text-[18px] leading-[1.35] tracking-[-1px] text-white lg:text-[18px] lg:leading-[1.1] lg:tracking-[-1.2px]">
 								<?php echo esc_html( $body ); ?>
 							</p>
 						<?php endif; ?>

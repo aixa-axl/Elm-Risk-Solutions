@@ -53,7 +53,7 @@ $link_title = ! empty( $link['title'] ) ? $link['title'] : ( $is_overlay ? __( '
 					<?php endif; ?>
 
 					<?php if ( $body ) : ?>
-						<p class="mt-5 m-0 font-sans text-[18px] leading-[1.35] tracking-[-1px] text-cream lg:mt-6 lg:text-[24px] lg:leading-[1.1] lg:tracking-[-1.2px]">
+						<p class="mt-5 m-0 font-sans text-[18px] leading-[1.35] tracking-[-1px] text-cream lg:mt-6 lg:text-[18px] lg:leading-[1.1] lg:tracking-[-1.2px]">
 							<?php echo esc_html( $body ); ?>
 						</p>
 					<?php endif; ?>
@@ -107,7 +107,7 @@ $link_title = ! empty( $link['title'] ) ? $link['title'] : ( $is_overlay ? __( '
 					<?php endif; ?>
 
 					<?php if ( $body ) : ?>
-						<p class="mt-6 m-0 font-sans text-[20px] leading-[1.35] tracking-[-1px] text-white lg:mt-8 lg:text-[24px] lg:tracking-[-1.2px]">
+						<p class="mt-6 m-0 font-sans text-[20px] leading-[1.35] tracking-[-1px] text-white lg:mt-8 lg:text-[18px] lg:tracking-[-1.2px]">
 							<?php echo esc_html( $body ); ?>
 						</p>
 					<?php endif; ?>

@@ -27,7 +27,7 @@ $section_bg_map = array(
 );
 $section_bg_class = isset( $section_bg_map[ $section_background ] ) ? $section_bg_map[ $section_background ] : 'bg-site-bg';
 
-$text_class = 'font-sans text-[18px] leading-[1.35] tracking-[-1px] text-ink lg:text-[24px] lg:leading-[1.1] lg:tracking-[-1.2px]';
+$text_class = 'font-sans text-[18px] leading-[1.35] tracking-[-1px] text-ink lg:text-[18px] lg:leading-[1.1] lg:tracking-[-1.2px]';
 ?>
 
 <section class="ers-contact <?php echo esc_attr( $section_bg_class ); ?>" aria-label="<?php echo esc_attr( $heading ? $heading : __( 'Contact', 'elm-risk-solutions' ) ); ?>">

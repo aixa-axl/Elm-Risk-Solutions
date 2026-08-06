@@ -52,7 +52,7 @@ if ( ! $label && ! $heading && ! $has_items ) {
 						<?php endif; ?>
 
 						<?php if ( $body ) : ?>
-							<p class="mt-5 m-0 max-w-[240px] font-sans text-[18px] leading-[1.35] tracking-[-1px] text-ink lg:mt-6 lg:text-[24px] lg:leading-[1.1] lg:tracking-[-1.2px]">
+							<p class="mt-5 m-0 max-w-[240px] font-sans text-[18px] leading-[1.35] tracking-[-1px] text-ink lg:mt-6 lg:text-[18px] lg:leading-[1.1] lg:tracking-[-1.2px]">
 								<?php echo esc_html( $body ); ?>
 							</p>
 						<?php endif; ?>

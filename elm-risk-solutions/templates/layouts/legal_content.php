@@ -30,7 +30,7 @@ if ( ! $heading && ! $label && ! $body ) {
 		<?php endif; ?>
 
 		<?php if ( $body ) : ?>
-			<div class="ers-legal-content__body mt-8 max-w-[1020px] font-sans text-[18px] leading-[1.35] tracking-[-1px] text-ink lg:mt-10 lg:text-[23px] lg:leading-[1.1] lg:tracking-[-1.2px]">
+			<div class="ers-legal-content__body mt-8 max-w-[1020px] font-sans text-[18px] leading-[1.35] tracking-[-1px] text-ink lg:mt-10 lg:text-[18px] lg:leading-[1.1] lg:tracking-[-1.2px]">
 				<?php echo wp_kses_post( $body ); ?>
 			</div>
 		<?php endif; ?>

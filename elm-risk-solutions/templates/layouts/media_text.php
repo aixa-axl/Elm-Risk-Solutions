@@ -77,7 +77,7 @@ $link_title = ! empty( $link['title'] ) ? $link['title'] : '';
 					<?php endif; ?>
 
 					<?php if ( $body ) : ?>
-						<div class="mt-6 space-y-5 font-sans text-[18px] leading-[1.35] tracking-[-1px] text-cream lg:mt-8 lg:space-y-6 lg:text-[23px] lg:leading-[1.1] lg:tracking-[-1.2px] [&_p]:m-0">
+						<div class="mt-6 space-y-5 font-sans text-[18px] leading-[1.35] tracking-[-1px] text-cream lg:mt-8 lg:space-y-6 lg:text-[18px] lg:leading-[1.1] lg:tracking-[-1.2px] [&_p]:m-0">
 							<?php echo wp_kses_post( $body ); ?>
 						</div>
 					<?php endif; ?>
