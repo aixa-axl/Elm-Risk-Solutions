@@ -34,14 +34,14 @@ $cta_class      = 'inline-flex h-[55px] min-w-[172px] items-center justify-cente
 						'medium',
 						false,
 						array(
-							'class'         => 'h-10 w-auto object-contain object-left lg:h-12',
+							'class'         => 'h-8 w-auto object-contain object-left lg:h-12',
 							'alt'           => get_bloginfo( 'name' ),
 							'fetchpriority' => 'high',
 						)
 					);
 					?>
 				<?php else : ?>
-					<span class="font-display text-2xl text-black tracking-[-1px] lg:text-nav-logo lg:tracking-[-2px]">
+					<span class="font-display text-[20px] text-black tracking-[-1px] lg:text-nav-logo lg:tracking-[-2px]">
 						<?php bloginfo( 'name' ); ?>
 					</span>
 				<?php endif; ?>
