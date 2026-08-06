@@ -699,12 +699,8 @@ video {
   aspect-ratio: 1 / 1;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-\[41px\] {
-  height: 41px;
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-\[55px\] {
@@ -739,12 +735,12 @@ video {
   min-height: 640px;
 }
 
-.w-\[32px\] {
-  width: 32px;
+.w-6 {
+  width: 1.5rem;
 }
 
-.w-\[41px\] {
-  width: 41px;
+.w-\[32px\] {
+  width: 32px;
 }
 
 .w-auto {
@@ -773,6 +769,10 @@ video {
 
 .max-w-\[1114px\] {
   max-width: 1114px;
+}
+
+.max-w-\[16ch\] {
+  max-width: 16ch;
 }
 
 .max-w-\[240px\] {
@@ -939,6 +939,10 @@ video {
   overflow: hidden;
 }
 
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1071,14 +1075,14 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-\[35px\] {
-  padding-top: 35px;
-  padding-bottom: 35px;
 }
 
 .py-section {
@@ -1120,11 +1124,6 @@ video {
 
 .font-sans {
   font-family: "Avenir Next", Avenir, Helvetica Neue, system-ui, sans-serif;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-3xl {
@@ -1428,6 +1427,25 @@ body {
 
   .ers-media-text:not(:has(+ .ers-media-text)) {
     padding-bottom: 80px;
+  }
+}
+
+/*
+ * Stacked Media + Text only (insurance page): narrower coloured panels.
+ * Standalone Media + Text (e.g. Let’s talk CTA) keeps default gutters.
+ */
+
+.ers-media-text:has(+ .ers-media-text) .ers-media-text__wrap,
+.ers-media-text + .ers-media-text .ers-media-text__wrap {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .ers-media-text:has(+ .ers-media-text) .ers-media-text__wrap,
+  .ers-media-text + .ers-media-text .ers-media-text__wrap {
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
   }
 }
 
@@ -1749,8 +1767,8 @@ body {
     display: none;
   }
 
-  .lg\:h-12 {
-    height: 3rem;
+  .lg\:h-9 {
+    height: 2.25rem;
   }
 
   .lg\:min-h-\[675px\] {
@@ -1899,9 +1917,9 @@ body {
     padding-bottom: 5rem;
   }
 
-  .lg\:py-\[35px\] {
-    padding-top: 35px;
-    padding-bottom: 35px;
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .lg\:pb-14 {
@@ -1920,6 +1938,10 @@ body {
     padding-top: 7rem;
   }
 
+  .lg\:text-left {
+    text-align: left;
+  }
+
   .lg\:text-right {
     text-align: right;
   }
@@ -1932,20 +1954,8 @@ body {
     font-size: 18px;
   }
 
-  .lg\:text-\[20\.333px\] {
-    font-size: 20.333px;
-  }
-
   .lg\:text-\[22\.333px\] {
     font-size: 22.333px;
-  }
-
-  .lg\:text-\[23px\] {
-    font-size: 23px;
-  }
-
-  .lg\:text-\[24px\] {
-    font-size: 24px;
   }
 
   .lg\:text-\[25px\] {
@@ -1958,6 +1968,10 @@ body {
 
   .lg\:text-\[27\.667px\] {
     font-size: 27.667px;
+  }
+
+  .lg\:text-\[30px\] {
+    font-size: 30px;
   }
 
   .lg\:text-\[33\.333px\] {

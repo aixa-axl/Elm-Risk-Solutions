@@ -101,6 +101,24 @@ body {
 }
 
 /*
+ * Stacked Media + Text only (insurance page): narrower coloured panels.
+ * Standalone Media + Text (e.g. Let’s talk CTA) keeps default gutters.
+ */
+.ers-media-text:has(+ .ers-media-text) .ers-media-text__wrap,
+.ers-media-text + .ers-media-text .ers-media-text__wrap {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .ers-media-text:has(+ .ers-media-text) .ers-media-text__wrap,
+  .ers-media-text + .ers-media-text .ers-media-text__wrap {
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+  }
+}
+
+/*
  * Enquiry form (Fluent Forms) — navy panel, cream fields, brand submit.
  * Field layout (columns etc.) is configured in Fluent Forms.
  * !important used where Fluent public CSS otherwise wins.
