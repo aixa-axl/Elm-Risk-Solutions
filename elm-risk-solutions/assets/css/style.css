@@ -1439,13 +1439,9 @@ body {
 }
 
 /*
- * Approach → Media + Text: collapse the doubled white gap above the first
- * coloured panel (e.g. Elm approach → Personal service).
+ * Approach → Media + Text: drop only the Media + Text top padding so the
+ * white gap isn’t doubled, while Approach keeps its normal bottom spacing.
  */
-
-.ers-approach:has(+ .ers-media-text) > div {
-  padding-bottom: 0 !important;
-}
 
 .ers-approach + .ers-media-text {
   padding-top: 0 !important;
@@ -1466,10 +1462,6 @@ body {
 
   .ers-hero--overlay:has(+ .ers-intro.bg-site-bg) > div,
   .ers-hero--split:has(+ .ers-intro.bg-site-bg) > div {
-    padding-bottom: 0 !important;
-  }
-
-  .ers-approach:has(+ .ers-media-text) > div {
     padding-bottom: 0 !important;
   }
 
