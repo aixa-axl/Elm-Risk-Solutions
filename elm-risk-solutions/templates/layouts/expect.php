@@ -44,7 +44,7 @@ if ( ! $label && ! $heading && ! $has_items ) {
 						continue;
 					}
 					?>
-					<li class="flex flex-col text-left">
+					<li class="flex flex-col items-center text-center lg:items-start lg:text-left">
 						<?php if ( $title ) : ?>
 							<h3 class="m-0 min-h-[2.2em] font-sans text-[20px] uppercase leading-[1.1] tracking-[-1.3333px] text-ink lg:text-[27.667px]">
 								<?php echo esc_html( $title ); ?>
