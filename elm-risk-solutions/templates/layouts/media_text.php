@@ -39,6 +39,24 @@ $row_align   = $is_center ? 'lg:items-center' : 'lg:items-start';
 $heading_align = $is_center ? 'text-center' : 'text-left';
 
 $link_title = ! empty( $link['title'] ) ? $link['title'] : '';
+
+/**
+ * Render heading with line breaks. Prefer editor newlines; always break
+ * “Founded by …” after “Founded by” so the name sits on the second line.
+ */
+$heading_html = '';
+if ( $heading ) {
+	$heading_normalized = str_replace( array( "\r\n", "\r" ), "\n", $heading );
+	$heading_flat       = trim( preg_replace( '/\s+/u', ' ', $heading_normalized ) );
+
+	if ( preg_match( '/^(Founded by)\s+(.+)$/i', $heading_flat, $parts ) ) {
+		$heading_html = esc_html( $parts[1] ) . '<br />' . esc_html( $parts[2] );
+	} elseif ( false !== strpos( $heading_normalized, "\n" ) ) {
+		$heading_html = nl2br( esc_html( $heading_normalized ) );
+	} else {
+		$heading_html = esc_html( $heading_normalized );
+	}
+}
 ?>
 
 <section class="ers-media-text <?php echo esc_attr( $section_bg_class ); ?>" aria-label="<?php echo esc_attr( $heading ? $heading : __( 'Feature', 'elm-risk-solutions' ) ); ?>">
@@ -64,9 +82,9 @@ $link_title = ! empty( $link['title'] ) ? $link['title'] : '';
 				<?php endif; ?>
 
 				<div class="flex min-w-0 flex-1 flex-col lg:max-w-[420px] lg:pt-0">
-					<?php if ( $heading ) : ?>
+					<?php if ( $heading_html ) : ?>
 						<h2 class="m-0 font-display text-[36px] leading-[1.1] tracking-[-2px] text-cream lg:text-[45.667px] lg:tracking-[-2.3333px] <?php echo esc_attr( $heading_align ); ?>">
-							<?php echo nl2br( esc_html( $heading ) ); ?>
+							<?php echo $heading_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped above. ?>
 						</h2>
 					<?php endif; ?>
 
