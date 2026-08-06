@@ -15,6 +15,7 @@ $link               = get_sub_field( 'link' );
 $footer_note        = get_sub_field( 'footer_note' );
 $background         = get_sub_field( 'background' );
 $section_background = get_sub_field( 'section_background' );
+$content_align      = get_sub_field( 'content_align' );
 
 if ( ! $image && ! $heading && ! $label && ! $body && empty( $link['url'] ) && ! $footer_note ) {
 	return;
@@ -33,13 +34,17 @@ $section_bg_map = array(
 );
 $section_bg_class = isset( $section_bg_map[ $section_background ] ) ? $section_bg_map[ $section_background ] : 'bg-white';
 
+$is_center   = ( 'center' === $content_align );
+$row_align   = $is_center ? 'lg:items-center' : 'lg:items-start';
+$heading_align = $is_center ? 'text-center' : 'text-left';
+
 $link_title = ! empty( $link['title'] ) ? $link['title'] : '';
 ?>
 
 <section class="ers-media-text <?php echo esc_attr( $section_bg_class ); ?>" aria-label="<?php echo esc_attr( $heading ? $heading : __( 'Feature', 'elm-risk-solutions' ) ); ?>">
 	<div class="mx-auto w-full max-w-site px-5 lg:px-gutter">
 		<div class="<?php echo esc_attr( $bg_class ); ?> px-5 py-8 text-cream sm:px-8 sm:py-10 lg:px-12 lg:py-14">
-			<div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12 xl:gap-16">
+			<div class="flex flex-col gap-8 lg:flex-row lg:gap-12 xl:gap-16 <?php echo esc_attr( $row_align ); ?>">
 				<?php if ( $image ) : ?>
 					<div class="w-full shrink-0 lg:w-[48%] xl:w-[507px]">
 						<div class="aspect-square overflow-hidden">
@@ -60,7 +65,7 @@ $link_title = ! empty( $link['title'] ) ? $link['title'] : '';
 
 				<div class="flex min-w-0 flex-1 flex-col lg:max-w-[420px] lg:pt-0">
 					<?php if ( $heading ) : ?>
-						<h2 class="m-0 font-display text-[36px] leading-[1.1] tracking-[-2px] text-cream lg:text-[45.667px] lg:tracking-[-2.3333px]">
+						<h2 class="m-0 font-display text-[36px] leading-[1.1] tracking-[-2px] text-cream lg:text-[45.667px] lg:tracking-[-2.3333px] <?php echo esc_attr( $heading_align ); ?>">
 							<?php echo esc_html( $heading ); ?>
 						</h2>
 					<?php endif; ?>

@@ -404,6 +404,23 @@
                             "ui": 1
                         },
                         {
+                            "key": "field_ers_media_text_content_align",
+                            "label": "Content alignment",
+                            "name": "content_align",
+                            "type": "select",
+                            "instructions": "Left = insurance-style (top-aligned). Center = centered heading + text column vertically centered with the image (e.g. Let’s talk CTA).",
+                            "required": 0,
+                            "choices": {
+                                "left": "Left (default)",
+                                "center": "Center heading + vertical middle"
+                            },
+                            "default_value": "left",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1
+                        },
+                        {
                             "key": "field_ers_media_text_image",
                             "label": "Image",
                             "name": "image",
