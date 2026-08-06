@@ -418,6 +418,111 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_ers_contact": {
+                    "key": "layout_ers_contact",
+                    "name": "contact",
+                    "label": "Contact",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_ers_contact_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "e.g. Speak directly with Elm",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_contact_details",
+                            "label": "Details",
+                            "name": "details",
+                            "type": "repeater",
+                            "instructions": "Telephone, email, office hours — one row each.",
+                            "required": 0,
+                            "layout": "block",
+                            "button_label": "Add Detail",
+                            "sub_fields": [
+                                {
+                                    "key": "field_ers_contact_detail_label",
+                                    "label": "Label",
+                                    "name": "label",
+                                    "type": "text",
+                                    "instructions": "e.g. Telephone",
+                                    "required": 0
+                                },
+                                {
+                                    "key": "field_ers_contact_detail_value",
+                                    "label": "Value",
+                                    "name": "value",
+                                    "type": "text",
+                                    "instructions": "e.g. +44 (0)161 838 6790",
+                                    "required": 0
+                                },
+                                {
+                                    "key": "field_ers_contact_detail_link_type",
+                                    "label": "Link type",
+                                    "name": "link_type",
+                                    "type": "select",
+                                    "instructions": "Makes the value clickable when set.",
+                                    "required": 0,
+                                    "choices": {
+                                        "none": "None",
+                                        "tel": "Phone (tel:)",
+                                        "email": "Email (mailto:)"
+                                    },
+                                    "default_value": "none",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 1
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_ers_contact_note",
+                            "label": "Note",
+                            "name": "note",
+                            "type": "wysiwyg",
+                            "instructions": "Appointment / consultation copy under the details.",
+                            "required": 0,
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_ers_contact_form_note",
+                            "label": "Form note",
+                            "name": "form_note",
+                            "type": "text",
+                            "instructions": "e.g. You can also complete the form and we will be in touch.",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_contact_closing",
+                            "label": "Closing",
+                            "name": "closing",
+                            "type": "textarea",
+                            "instructions": "Display line under the form note, e.g. Based in the North West…",
+                            "required": 0,
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_ers_contact_icon",
+                            "label": "Icon",
+                            "name": "icon",
+                            "type": "image",
+                            "instructions": "Optional mark at the bottom. Leave empty until you have the asset.",
+                            "required": 0,
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_ers_media_text": {
                     "key": "layout_ers_media_text",
                     "name": "media_text",
