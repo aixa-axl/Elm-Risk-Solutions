@@ -1344,6 +1344,24 @@ body {
   flex: 1 0 auto;
 }
 
+/*
+ * Media + Text: 80px above first / below last; 50px between stacked panels
+ * (insurance solutions page).
+ */
+
+.ers-media-text {
+  padding-top: 80px;
+  padding-bottom: 0;
+}
+
+.ers-media-text + .ers-media-text {
+  padding-top: 50px;
+}
+
+.ers-media-text:not(:has(+ .ers-media-text)) {
+  padding-bottom: 80px;
+}
+
 .hover\:opacity-70:hover {
   opacity: 0.7;
 }
