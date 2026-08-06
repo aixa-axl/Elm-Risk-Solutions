@@ -52,6 +52,25 @@
                             "library": "all"
                         },
                         {
+                            "key": "field_ers_hero_darken_image",
+                            "label": "Darken image for text",
+                            "name": "darken_image",
+                            "type": "true_false",
+                            "instructions": "Adds a gradient overlay so cream text stays readable on light photos (e.g. Contact Us).",
+                            "required": 0,
+                            "default_value": 0,
+                            "ui": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_ers_hero_style",
+                                        "operator": "==",
+                                        "value": "overlay"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
                             "key": "field_ers_hero_heading",
                             "label": "Heading",
                             "name": "heading",
@@ -791,5 +810,5 @@
     "active": true,
     "description": "Flexible content sections for Elm Risk Solutions pages.",
     "show_in_rest": 0,
-    "modified": 1754419200
+    "modified": 1754487000
 }

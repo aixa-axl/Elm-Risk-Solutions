@@ -20,6 +20,12 @@ if ( ! $image && ! $heading && ! $body && empty( $link['url'] ) ) {
 
 $is_overlay = ( 'overlay' === $style );
 $link_title = ! empty( $link['title'] ) ? $link['title'] : ( $is_overlay ? __( 'Speak to us →', 'elm-risk-solutions' ) : __( 'Explore our solutions →', 'elm-risk-solutions' ) );
+
+// Scrim for cream text on light photos. Contact Us always; elsewhere via ACF toggle.
+$darken_image = (bool) get_sub_field( 'darken_image' );
+if ( ! $darken_image && $is_overlay && is_page( array( 'contact', 'contact-us', 'contactus' ) ) ) {
+	$darken_image = true;
+}
 ?>
 
 <?php if ( $is_overlay ) : ?>
@@ -42,6 +48,13 @@ $link_title = ! empty( $link['title'] ) ? $link['title'] : ( $is_overlay ? __( '
 					)
 				);
 				?>
+			<?php endif; ?>
+
+			<?php if ( $darken_image ) : ?>
+				<div
+					class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/50 to-ink/20"
+					aria-hidden="true"
+				></div>
 			<?php endif; ?>
 
 			<div class="relative z-10 w-full px-5 pb-10 pt-20 sm:px-8 lg:px-12 lg:pb-14 lg:pt-28">
