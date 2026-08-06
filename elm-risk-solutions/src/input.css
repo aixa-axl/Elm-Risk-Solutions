@@ -57,6 +57,11 @@ body {
   flex: 1 0 auto;
 }
 
+/* Hide sticky header on scroll down; JS toggles .is-header-hidden */
+.site-header.is-header-hidden {
+  transform: translateY(-100%);
+}
+
 /*
  * Section vertical padding: 40px mobile, 80px desktop.
  * Overrides the Tailwind spacing token so all py-section layouts match.

@@ -1312,6 +1312,24 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
 /* Self-hosted brand fonts (paths relative to assets/css/style.css) */
 
 @font-face {
@@ -1386,6 +1404,12 @@ body {
 
 .site-main {
   flex: 1 0 auto;
+}
+
+/* Hide sticky header on scroll down; JS toggles .is-header-hidden */
+
+.site-header.is-header-hidden {
+  transform: translateY(-100%);
 }
 
 /*
