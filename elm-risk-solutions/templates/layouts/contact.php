@@ -63,14 +63,14 @@ $text_class = 'font-sans text-[18px] leading-[1.35] tracking-[-1px] text-ink lg:
 						$href = 'mailto:' . sanitize_email( $value );
 					}
 					?>
-					<li class="<?php echo esc_attr( $text_class ); ?>">
+					<li class="<?php echo esc_attr( $text_class ); ?> font-medium">
 						<?php if ( $label ) : ?>
 							<p class="m-0"><?php echo esc_html( $label ); ?></p>
 						<?php endif; ?>
 						<?php if ( $value ) : ?>
 							<p class="m-0">
 								<?php if ( $href ) : ?>
-									<a href="<?php echo esc_url( $href ); ?>" class="text-ink no-underline transition-opacity hover:opacity-70">
+									<a href="<?php echo esc_url( $href ); ?>" class="font-medium text-ink no-underline transition-opacity hover:opacity-70">
 										<?php echo esc_html( $value ); ?>
 									</a>
 								<?php else : ?>
