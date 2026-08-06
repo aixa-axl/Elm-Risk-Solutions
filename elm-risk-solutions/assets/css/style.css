@@ -1138,16 +1138,16 @@ video {
   font-size: 13px;
 }
 
-.text-\[14px\] {
-  font-size: 14px;
-}
-
 .text-\[15px\] {
   font-size: 15px;
 }
 
 .text-\[16px\] {
   font-size: 16px;
+}
+
+.text-\[18\.333px\] {
+  font-size: 18.333px;
 }
 
 .text-\[18px\] {
@@ -1227,10 +1227,6 @@ video {
 
 .tracking-\[-0\.4px\] {
   letter-spacing: -0.4px;
-}
-
-.tracking-\[-0\.5px\] {
-  letter-spacing: -0.5px;
 }
 
 .tracking-\[-0\.8px\] {

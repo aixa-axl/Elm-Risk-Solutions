@@ -45,14 +45,14 @@ $link_class = 'font-sans text-[20.333px] leading-[1.3] tracking-[-1.0667px] text
 						<?php bloginfo( 'name' ); ?>
 					</p>
 					<?php if ( $footer_phone ) : ?>
-						<p class="mt-4 font-sans text-[14px] leading-[1.3] tracking-[-0.5px]">
+						<p class="mt-4 font-sans text-[18.333px] leading-[1.3] tracking-[-1.0667px]">
 							<a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^\d+]/', '', $footer_phone ) ); ?>" class="text-white no-underline transition-opacity hover:opacity-70">
 								<?php echo esc_html( $footer_phone ); ?>
 							</a>
 						</p>
 					<?php endif; ?>
 					<?php if ( $footer_email ) : ?>
-						<p class="<?php echo $footer_phone ? 'mt-1' : 'mt-4'; ?> font-sans text-[14px] leading-[1.3] tracking-[-0.5px]">
+						<p class="<?php echo $footer_phone ? 'mt-1' : 'mt-4'; ?> font-sans text-[18.333px] leading-[1.3] tracking-[-1.0667px]">
 							<a href="<?php echo esc_url( 'mailto:' . $footer_email ); ?>" class="text-white no-underline transition-opacity hover:opacity-70">
 								<?php echo esc_html( $footer_email ); ?>
 							</a>
