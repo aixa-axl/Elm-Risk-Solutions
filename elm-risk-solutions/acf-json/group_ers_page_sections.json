@@ -91,11 +91,36 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_ers_intro_section_background",
+                            "label": "Section background",
+                            "name": "section_background",
+                            "type": "select",
+                            "instructions": "White (default) or cream — e.g. Complaints / Ombudsman sections.",
+                            "required": 0,
+                            "choices": {
+                                "white": "White",
+                                "cream": "Cream"
+                            },
+                            "default_value": "white",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1
+                        },
+                        {
                             "key": "field_ers_intro_heading",
                             "label": "Heading",
                             "name": "heading",
                             "type": "text",
-                            "instructions": "e.g. Protection shaped around your life",
+                            "instructions": "e.g. Protection shaped around your life / Complaints",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_intro_label",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "Optional uppercase line under the heading (e.g. We are committed to putting things right).",
                             "required": 0
                         },
                         {
@@ -425,11 +450,36 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_ers_contact_section_background",
+                            "label": "Section background",
+                            "name": "section_background",
+                            "type": "select",
+                            "instructions": "White (default) or cream — e.g. Complaints “How to make a complaint”.",
+                            "required": 0,
+                            "choices": {
+                                "white": "White",
+                                "cream": "Cream"
+                            },
+                            "default_value": "white",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1
+                        },
+                        {
                             "key": "field_ers_contact_heading",
                             "label": "Heading",
                             "name": "heading",
                             "type": "text",
-                            "instructions": "e.g. Speak directly with Elm",
+                            "instructions": "e.g. Speak directly with Elm / How to make a complaint",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_contact_intro",
+                            "label": "Intro",
+                            "name": "intro",
+                            "type": "text",
+                            "instructions": "Optional line above the details (e.g. You can contact us by telephone, email or post:).",
                             "required": 0
                         },
                         {
@@ -437,7 +487,7 @@
                             "label": "Details",
                             "name": "details",
                             "type": "repeater",
-                            "instructions": "Telephone, email, office hours — one row each.",
+                            "instructions": "Telephone, email, office hours / post — one row each. Use line breaks in Value for multi-line addresses.",
                             "required": 0,
                             "layout": "block",
                             "button_label": "Add Detail",
@@ -447,16 +497,18 @@
                                     "label": "Label",
                                     "name": "label",
                                     "type": "text",
-                                    "instructions": "e.g. Telephone",
+                                    "instructions": "e.g. Telephone / Post",
                                     "required": 0
                                 },
                                 {
                                     "key": "field_ers_contact_detail_value",
                                     "label": "Value",
                                     "name": "value",
-                                    "type": "text",
-                                    "instructions": "e.g. +44 (0)161 838 6790",
-                                    "required": 0
+                                    "type": "textarea",
+                                    "instructions": "e.g. +44 (0)161 838 6790 — multi-line OK for postal addresses.",
+                                    "required": 0,
+                                    "rows": 3,
+                                    "new_lines": ""
                                 },
                                 {
                                     "key": "field_ers_contact_detail_link_type",
@@ -483,7 +535,7 @@
                             "label": "Note",
                             "name": "note",
                             "type": "wysiwyg",
-                            "instructions": "Appointment / consultation copy under the details.",
+                            "instructions": "Optional copy under the details (appointment text, etc.).",
                             "required": 0,
                             "tabs": "all",
                             "toolbar": "basic",
@@ -495,7 +547,7 @@
                             "label": "Form note",
                             "name": "form_note",
                             "type": "text",
-                            "instructions": "e.g. You can also complete the form and we will be in touch.",
+                            "instructions": "e.g. You can also complete the form… / Please provide your name, contact details…",
                             "required": 0
                         },
                         {

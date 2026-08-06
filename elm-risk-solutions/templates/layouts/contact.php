@@ -2,36 +2,50 @@
 /**
  * Layout: Contact
  *
- * “Speak directly with Elm” — centered contact details + notes + closing
- * (Figma frame 24 / node 5:549). Bottom icon is ACF-only.
+ * Centered contact details + notes (+ optional closing/icon).
+ * Used for “Speak directly with Elm” and Complaints “How to make a complaint”.
  */
 
-$heading   = get_sub_field( 'heading' );
-$details   = get_sub_field( 'details' );
-$note      = get_sub_field( 'note' );
-$form_note = get_sub_field( 'form_note' );
-$closing   = get_sub_field( 'closing' );
-$icon      = get_sub_field( 'icon' );
+$heading            = get_sub_field( 'heading' );
+$intro              = get_sub_field( 'intro' );
+$details            = get_sub_field( 'details' );
+$note               = get_sub_field( 'note' );
+$form_note          = get_sub_field( 'form_note' );
+$closing            = get_sub_field( 'closing' );
+$icon               = get_sub_field( 'icon' );
+$section_background = get_sub_field( 'section_background' );
 
 $has_details = is_array( $details ) && ! empty( $details );
 
-if ( ! $heading && ! $has_details && ! $note && ! $form_note && ! $closing && ! $icon ) {
+if ( ! $heading && ! $intro && ! $has_details && ! $note && ! $form_note && ! $closing && ! $icon ) {
 	return;
 }
+
+$section_bg_map = array(
+	'white' => 'bg-site-bg',
+	'cream' => 'bg-cream',
+);
+$section_bg_class = isset( $section_bg_map[ $section_background ] ) ? $section_bg_map[ $section_background ] : 'bg-site-bg';
 
 $text_class = 'font-sans text-[18px] leading-[1.35] tracking-[-1px] text-ink lg:text-[24px] lg:leading-[1.1] lg:tracking-[-1.2px]';
 ?>
 
-<section class="ers-contact bg-site-bg" aria-label="<?php echo esc_attr( $heading ? $heading : __( 'Contact', 'elm-risk-solutions' ) ); ?>">
+<section class="ers-contact <?php echo esc_attr( $section_bg_class ); ?>" aria-label="<?php echo esc_attr( $heading ? $heading : __( 'Contact', 'elm-risk-solutions' ) ); ?>">
 	<div class="mx-auto flex w-full max-w-site flex-col items-center px-5 py-section text-center lg:px-gutter">
 		<?php if ( $heading ) : ?>
-			<h2 class="m-0 max-w-[500px] font-display text-[36px] leading-[1.1] tracking-[-2px] text-black lg:text-[45.667px] lg:tracking-[-2.3333px]">
+			<h2 class="m-0 max-w-[500px] font-display text-[36px] leading-[1.1] tracking-[-2px] text-black lg:max-w-[560px] lg:text-[45.667px] lg:tracking-[-2.3333px]">
 				<?php echo esc_html( $heading ); ?>
 			</h2>
 		<?php endif; ?>
 
+		<?php if ( $intro ) : ?>
+			<p class="mt-8 m-0 max-w-[704px] <?php echo esc_attr( $text_class ); ?> lg:mt-10">
+				<?php echo esc_html( $intro ); ?>
+			</p>
+		<?php endif; ?>
+
 		<?php if ( $has_details ) : ?>
-			<ul class="mt-10 m-0 flex list-none flex-col gap-6 p-0 lg:mt-12 lg:gap-7">
+			<ul class="<?php echo $intro ? 'mt-8 lg:mt-10' : 'mt-10 lg:mt-12'; ?> m-0 flex list-none flex-col gap-6 p-0 lg:gap-7">
 				<?php foreach ( $details as $row ) : ?>
 					<?php
 					$label = isset( $row['label'] ) ? $row['label'] : '';
@@ -46,7 +60,7 @@ $text_class = 'font-sans text-[18px] leading-[1.35] tracking-[-1px] text-ink lg:
 					if ( 'tel' === $type && $value ) {
 						$href = 'tel:' . preg_replace( '/[^\d+]/', '', $value );
 					} elseif ( 'email' === $type && $value ) {
-						$href = 'mailto:' . $value;
+						$href = 'mailto:' . sanitize_email( $value );
 					}
 					?>
 					<li class="<?php echo esc_attr( $text_class ); ?>">
@@ -60,7 +74,7 @@ $text_class = 'font-sans text-[18px] leading-[1.35] tracking-[-1px] text-ink lg:
 										<?php echo esc_html( $value ); ?>
 									</a>
 								<?php else : ?>
-									<?php echo esc_html( $value ); ?>
+									<?php echo nl2br( esc_html( $value ) ); ?>
 								<?php endif; ?>
 							</p>
 						<?php endif; ?>
