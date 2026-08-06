@@ -1439,12 +1439,20 @@ body {
 }
 
 /*
- * Approach → Media + Text: drop only the Media + Text top padding so the
- * white gap isn’t doubled, while Approach keeps its normal bottom spacing.
+ * Approach → Media + Text: tighten the white space above the first coloured
+ * panel without removing it entirely (section bottom + bottom-row cell pad).
  */
+
+.ers-approach:has(+ .ers-media-text) > div {
+  padding-bottom: 0 !important;
+}
 
 .ers-approach + .ers-media-text {
   padding-top: 0 !important;
+}
+
+.ers-approach:has(+ .ers-media-text) li:nth-child(n + 3) {
+  padding-bottom: 1.5rem !important;
 }
 
 @media (min-width: 1024px) {
@@ -1465,8 +1473,16 @@ body {
     padding-bottom: 0 !important;
   }
 
+  .ers-approach:has(+ .ers-media-text) > div {
+    padding-bottom: 0 !important;
+  }
+
   .ers-approach + .ers-media-text {
     padding-top: 0 !important;
+  }
+
+  .ers-approach:has(+ .ers-media-text) li:nth-child(n + 3) {
+    padding-bottom: 2rem !important;
   }
 }
 
