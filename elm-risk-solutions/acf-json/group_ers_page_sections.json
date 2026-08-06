@@ -362,6 +362,62 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_ers_expect": {
+                    "key": "layout_ers_expect",
+                    "name": "expect",
+                    "label": "Expect",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_ers_expect_label",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "Uppercase eyebrow, e.g. What you can expect",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_expect_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "e.g. Expertise without distance",
+                            "required": 0
+                        },
+                        {
+                            "key": "field_ers_expect_items",
+                            "label": "Items",
+                            "name": "items",
+                            "type": "repeater",
+                            "instructions": "Four columns in reading order (left to right).",
+                            "required": 0,
+                            "layout": "block",
+                            "button_label": "Add Item",
+                            "max": 4,
+                            "sub_fields": [
+                                {
+                                    "key": "field_ers_expect_item_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "e.g. Personal attention",
+                                    "required": 0
+                                },
+                                {
+                                    "key": "field_ers_expect_item_body",
+                                    "label": "Body",
+                                    "name": "body",
+                                    "type": "textarea",
+                                    "required": 0,
+                                    "rows": 4,
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_ers_media_text": {
                     "key": "layout_ers_media_text",
                     "name": "media_text",
