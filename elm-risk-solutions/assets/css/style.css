@@ -1416,6 +1416,25 @@ body {
   padding-top: 0 !important;
 }
 
+/*
+ * White Media + Text → white Intro: drop Intro top padding so the shared
+ * white strip isn’t doubled (e.g. taupe panel → “A more considered approach”).
+ */
+
+.ers-media-text.bg-white + .ers-intro.bg-site-bg > div {
+  padding-top: 0 !important;
+}
+
+/*
+ * Hero → white Intro: drop the hero’s bottom padding so the white strip
+ * under the hero panel isn’t doubled with the Intro’s top padding.
+ */
+
+.ers-hero--overlay:has(+ .ers-intro.bg-site-bg) > div,
+.ers-hero--split:has(+ .ers-intro.bg-site-bg) > div {
+  padding-bottom: 0 !important;
+}
+
 @media (min-width: 1024px) {
   .ers-intro.bg-site-bg + .ers-hero--overlay > div {
     padding-top: 0 !important;
@@ -1423,6 +1442,15 @@ body {
 
   .ers-intro.bg-site-bg + .ers-media-text.bg-white {
     padding-top: 0 !important;
+  }
+
+  .ers-media-text.bg-white + .ers-intro.bg-site-bg > div {
+    padding-top: 0 !important;
+  }
+
+  .ers-hero--overlay:has(+ .ers-intro.bg-site-bg) > div,
+  .ers-hero--split:has(+ .ers-intro.bg-site-bg) > div {
+    padding-bottom: 0 !important;
   }
 }
 
