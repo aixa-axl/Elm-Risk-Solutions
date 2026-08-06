@@ -1403,12 +1403,27 @@ body {
 }
 
 /*
- * Intro → overlay Hero: drop the hero’s top padding so the shared white
- * strip isn’t doubled. Other Intro / Hero placements stay unchanged.
+ * Collapse the doubled white gap only when a white Intro is followed by
+ * an overlay Hero or a white Media + Text (About: “Here when you need us”
+ * → Eleanor panel). Does not change other Intro / Hero / Media + Text uses.
  */
 
-.ers-intro + .ers-hero--overlay > div {
-  padding-top: 0;
+.ers-intro.bg-site-bg + .ers-hero--overlay > div {
+  padding-top: 0 !important;
+}
+
+.ers-intro.bg-site-bg + .ers-media-text.bg-white {
+  padding-top: 0 !important;
+}
+
+@media (min-width: 1024px) {
+  .ers-intro.bg-site-bg + .ers-hero--overlay > div {
+    padding-top: 0 !important;
+  }
+
+  .ers-intro.bg-site-bg + .ers-media-text.bg-white {
+    padding-top: 0 !important;
+  }
 }
 
 /*
