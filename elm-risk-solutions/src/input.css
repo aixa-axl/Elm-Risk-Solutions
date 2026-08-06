@@ -103,6 +103,18 @@ body {
   padding-bottom: 0 !important;
 }
 
+/*
+ * Approach → Media + Text: collapse the doubled white gap above the first
+ * coloured panel (e.g. Elm approach → Personal service).
+ */
+.ers-approach:has(+ .ers-media-text) > div {
+  padding-bottom: 0 !important;
+}
+
+.ers-approach + .ers-media-text {
+  padding-top: 0 !important;
+}
+
 @media (min-width: 1024px) {
   .ers-intro.bg-site-bg + .ers-hero--overlay > div {
     padding-top: 0 !important;
@@ -119,6 +131,14 @@ body {
   .ers-hero--overlay:has(+ .ers-intro.bg-site-bg) > div,
   .ers-hero--split:has(+ .ers-intro.bg-site-bg) > div {
     padding-bottom: 0 !important;
+  }
+
+  .ers-approach:has(+ .ers-media-text) > div {
+    padding-bottom: 0 !important;
+  }
+
+  .ers-approach + .ers-media-text {
+    padding-top: 0 !important;
   }
 }
 
