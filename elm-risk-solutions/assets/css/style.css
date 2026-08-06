@@ -1439,20 +1439,16 @@ body {
 }
 
 /*
- * Approach → Media + Text: tighten the white space above the first coloured
- * panel without removing it entirely (section bottom + bottom-row cell pad).
+ * Approach → Media + Text: keep Approach’s grid spacing intact; only remove
+ * the Media + Text top padding and use a moderate Approach bottom gap.
  */
 
 .ers-approach:has(+ .ers-media-text) > div {
-  padding-bottom: 0 !important;
+  padding-bottom: 40px !important;
 }
 
 .ers-approach + .ers-media-text {
   padding-top: 0 !important;
-}
-
-.ers-approach:has(+ .ers-media-text) li:nth-child(n + 3) {
-  padding-bottom: 1.5rem !important;
 }
 
 @media (min-width: 1024px) {
@@ -1474,15 +1470,11 @@ body {
   }
 
   .ers-approach:has(+ .ers-media-text) > div {
-    padding-bottom: 0 !important;
+    padding-bottom: 40px !important;
   }
 
   .ers-approach + .ers-media-text {
     padding-top: 0 !important;
-  }
-
-  .ers-approach:has(+ .ers-media-text) li:nth-child(n + 3) {
-    padding-bottom: 2rem !important;
   }
 }
 
