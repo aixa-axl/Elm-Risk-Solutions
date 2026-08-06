@@ -115,6 +115,19 @@ body {
   padding-top: 0 !important;
 }
 
+/*
+ * Media + Text / Feature Panel / Hero → Contact (“Speak directly with Elm”):
+ * drop Contact top padding so only one section gap remains.
+ */
+.ers-media-text + .ers-contact > div,
+.ers-hero + .ers-contact > div {
+  padding-top: 0 !important;
+}
+
+.ers-feature-panel + .ers-contact > div {
+  padding-top: 40px !important;
+}
+
 @media (min-width: 1024px) {
   .ers-intro.bg-site-bg + .ers-hero--overlay > div {
     padding-top: 0 !important;
@@ -139,6 +152,15 @@ body {
 
   .ers-approach + .ers-media-text {
     padding-top: 0 !important;
+  }
+
+  .ers-media-text + .ers-contact > div,
+  .ers-hero + .ers-contact > div {
+    padding-top: 0 !important;
+  }
+
+  .ers-feature-panel + .ers-contact > div {
+    padding-top: 40px !important;
   }
 }
 
