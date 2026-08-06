@@ -1593,10 +1593,10 @@ body {
 .ers-enquiry-form__panel .ff-el-form-check-label,
 .ers-enquiry-form__panel .ff-el-form-check-label span {
   color: #ffffff !important;
-  font-size: 18px !important;
+  font-size: 14px !important;
   font-weight: 400 !important;
-  letter-spacing: -1px !important;
-  line-height: 1.1 !important;
+  letter-spacing: -0.5px !important;
+  line-height: 1.2 !important;
 }
 
 .ers-enquiry-form__panel .ff-el-input--label .ff-el-is-required::after,
@@ -1610,14 +1610,14 @@ body {
 @media (min-width: 1024px) {
   .ers-enquiry-form__panel .ff-el-input--label,
   .ers-enquiry-form__panel .ff-el-input--label label {
-    font-size: 25px !important;
-    letter-spacing: -1.2px !important;
+    font-size: 16px !important;
+    letter-spacing: -0.6px !important;
   }
 
   .ers-enquiry-form__panel .ff-el-form-check-label,
   .ers-enquiry-form__panel .ff-el-form-check-label span {
-    font-size: 18.667px !important;
-    letter-spacing: -0.9333px !important;
+    font-size: 16px !important;
+    letter-spacing: -0.6px !important;
   }
 }
 
