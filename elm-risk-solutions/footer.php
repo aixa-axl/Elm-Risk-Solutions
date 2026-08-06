@@ -152,9 +152,9 @@ $link_class = 'font-sans text-[20.333px] leading-[1.3] tracking-[-1.0667px] text
 										<img
 											src="<?php echo esc_url( $ig_src ); ?>"
 											alt="<?php echo esc_attr__( 'Instagram', 'elm-risk-solutions' ); ?>"
-											width="41"
-											height="41"
-											class="h-[41px] w-[41px]"
+											width="32"
+											height="32"
+											class="h-8 w-8"
 											loading="lazy"
 										>
 									</a>
@@ -171,9 +171,9 @@ $link_class = 'font-sans text-[20.333px] leading-[1.3] tracking-[-1.0667px] text
 										<img
 											src="<?php echo esc_url( $linkedin_src ); ?>"
 											alt="<?php echo esc_attr__( 'LinkedIn', 'elm-risk-solutions' ); ?>"
-											width="41"
-											height="41"
-											class="h-[41px] w-[41px]"
+											width="32"
+											height="32"
+											class="h-8 w-8"
 											loading="lazy"
 										>
 									</a>
