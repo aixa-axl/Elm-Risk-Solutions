@@ -3,12 +3,8 @@
  */
 (function () {
 	const header = document.querySelector('#masthead');
-	if (!header) {
-		return;
-	}
-
-	const toggle = header.querySelector('[data-mobile-nav-toggle]');
-	const panel = header.querySelector('[data-mobile-nav-panel]');
+	const toggle = header ? header.querySelector('[data-mobile-nav-toggle]') : null;
+	const panel = header ? header.querySelector('[data-mobile-nav-panel]') : null;
 
 	if (toggle && panel) {
 		toggle.addEventListener('click', function () {
@@ -17,7 +13,7 @@
 			panel.hidden = open;
 
 			// Keep header visible while the mobile menu is open.
-			if (!open) {
+			if (!open && header) {
 				header.classList.remove('is-header-hidden');
 			}
 		});
@@ -27,42 +23,91 @@
 	 * Hide header on scroll down; reveal on scroll up.
 	 * Stays visible near the top of the page and while mobile nav is open.
 	 */
-	let lastY = window.scrollY || 0;
-	let ticking = false;
-	const threshold = 8;
-	const topReveal = 80;
+	if (header) {
+		let lastY = window.scrollY || 0;
+		let ticking = false;
+		const threshold = 8;
+		const topReveal = 80;
 
-	function isMobileNavOpen() {
-		return toggle && toggle.getAttribute('aria-expanded') === 'true';
+		function isMobileNavOpen() {
+			return toggle && toggle.getAttribute('aria-expanded') === 'true';
+		}
+
+		function updateHeader() {
+			const y = window.scrollY || 0;
+			const delta = y - lastY;
+
+			if (Math.abs(delta) < threshold) {
+				ticking = false;
+				return;
+			}
+
+			if (y <= topReveal || isMobileNavOpen() || delta < 0) {
+				header.classList.remove('is-header-hidden');
+			} else {
+				header.classList.add('is-header-hidden');
+			}
+
+			lastY = y;
+			ticking = false;
+		}
+
+		window.addEventListener(
+			'scroll',
+			function () {
+				if (!ticking) {
+					window.requestAnimationFrame(updateHeader);
+					ticking = true;
+				}
+			},
+			{ passive: true }
+		);
 	}
 
-	function updateHeader() {
-		const y = window.scrollY || 0;
-		const delta = y - lastY;
+	/**
+	 * Subtle fade-in as sections enter the viewport.
+	 */
+	function initScrollReveal() {
+		const prefersReduced =
+			window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		const sections = document.querySelectorAll('.site-main .entry-content > section');
 
-		if (Math.abs(delta) < threshold) {
-			ticking = false;
+		if (!sections.length) {
 			return;
 		}
 
-		if (y <= topReveal || isMobileNavOpen() || delta < 0) {
-			header.classList.remove('is-header-hidden');
-		} else {
-			header.classList.add('is-header-hidden');
+		if (prefersReduced || !('IntersectionObserver' in window)) {
+			sections.forEach(function (section) {
+				section.classList.add('ers-reveal', 'is-visible');
+			});
+			return;
 		}
 
-		lastY = y;
-		ticking = false;
+		const observer = new IntersectionObserver(
+			function (entries) {
+				entries.forEach(function (entry) {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('is-visible');
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				root: null,
+				rootMargin: '0px 0px -8% 0px',
+				threshold: 0.12,
+			}
+		);
+
+		sections.forEach(function (section) {
+			section.classList.add('ers-reveal');
+			observer.observe(section);
+		});
 	}
 
-	window.addEventListener(
-		'scroll',
-		function () {
-			if (!ticking) {
-				window.requestAnimationFrame(updateHeader);
-				ticking = true;
-			}
-		},
-		{ passive: true }
-	);
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initScrollReveal);
+	} else {
+		initScrollReveal();
+	}
 })();

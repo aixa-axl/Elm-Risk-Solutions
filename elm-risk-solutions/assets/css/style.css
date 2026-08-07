@@ -1329,6 +1329,12 @@ video {
   opacity: 1;
 }
 
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1339,6 +1345,10 @@ video {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
 }
 
 .duration-300 {
@@ -1433,6 +1443,30 @@ body {
 
 .site-header.is-header-hidden {
   transform: translateY(-100%);
+}
+
+/*
+ * Subtle scroll fade-in for page sections.
+ * JS adds .ers-reveal then .is-visible when in view.
+ */
+
+.ers-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.ers-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ers-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /*
@@ -1720,7 +1754,7 @@ body {
   min-width: 197px !important;
   padding: 0.75rem 1.5rem !important;
   text-transform: uppercase !important;
-  transition: opacity 0.2s ease !important;
+  transition: background-color 0.2s ease !important;
 }
 
 .ers-enquiry-form__panel .ff-btn-submit:hover,
@@ -1729,9 +1763,9 @@ body {
 .ers-enquiry-form__panel button.ff-btn-submit:focus,
 .ers-enquiry-form__panel .ff-btn.ff-btn-submit:hover,
 .ers-enquiry-form__panel .ff-btn.ff-btn-submit:focus {
-  background-color: #a12f5c !important;
+  background-color: #86264c !important;
   color: #ffffff !important;
-  opacity: 0.9 !important;
+  opacity: 1 !important;
 }
 
 .ers-enquiry-form__panel .ff-message-success,
@@ -1794,16 +1828,22 @@ body {
   opacity: 0.7;
 }
 
+.hover\:bg-cta-hover:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(114 103 92 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-ink-hover:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 24 40 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:opacity-70:hover {
   opacity: 0.7;
 }
 
 .hover\:opacity-80:hover {
   opacity: 0.8;
-}
-
-.hover\:opacity-90:hover {
-  opacity: 0.9;
 }
 
 @media (min-width: 640px) {

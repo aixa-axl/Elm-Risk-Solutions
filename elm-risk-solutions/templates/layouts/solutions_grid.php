@@ -18,7 +18,7 @@ if ( ! $heading && ! $label && ! $intro && ! $has_cards && empty( $cta['url'] ) 
 	return;
 }
 
-$cta_class = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-ink px-8 font-sans text-nav-cta uppercase text-white no-underline transition-opacity hover:opacity-90 lg:min-w-[393px]';
+$cta_class = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-ink px-8 font-sans text-nav-cta uppercase text-white no-underline transition-colors duration-200 hover:bg-ink-hover lg:min-w-[393px]';
 ?>
 
 <section class="ers-solutions-grid bg-cream" aria-label="<?php echo esc_attr__( 'Insurance solutions', 'elm-risk-solutions' ); ?>">

@@ -63,6 +63,29 @@ body {
 }
 
 /*
+ * Subtle scroll fade-in for page sections.
+ * JS adds .ers-reveal then .is-visible when in view.
+ */
+.ers-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.ers-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ers-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/*
  * Section vertical padding: 40px mobile, 80px desktop.
  * Overrides the Tailwind spacing token so all py-section layouts match.
  */
@@ -331,7 +354,7 @@ body {
   min-width: 197px !important;
   padding: 0.75rem 1.5rem !important;
   text-transform: uppercase !important;
-  transition: opacity 0.2s ease !important;
+  transition: background-color 0.2s ease !important;
 }
 
 .ers-enquiry-form__panel .ff-btn-submit:hover,
@@ -340,9 +363,9 @@ body {
 .ers-enquiry-form__panel button.ff-btn-submit:focus,
 .ers-enquiry-form__panel .ff-btn.ff-btn-submit:hover,
 .ers-enquiry-form__panel .ff-btn.ff-btn-submit:focus {
-  background-color: #a12f5c !important;
+  background-color: #86264c !important;
   color: #ffffff !important;
-  opacity: 0.9 !important;
+  opacity: 1 !important;
 }
 
 .ers-enquiry-form__panel .ff-message-success,

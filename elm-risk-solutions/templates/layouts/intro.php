@@ -23,7 +23,7 @@ $section_bg_map = array(
 );
 $section_bg_class = isset( $section_bg_map[ $section_background ] ) ? $section_bg_map[ $section_background ] : 'bg-site-bg';
 
-$cta_class = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-cta px-6 font-sans text-nav-cta uppercase text-white no-underline transition-opacity hover:opacity-90';
+$cta_class = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-cta px-6 font-sans text-nav-cta uppercase text-white no-underline transition-colors duration-200 hover:bg-cta-hover';
 ?>
 
 <section class="ers-intro <?php echo esc_attr( $section_bg_class ); ?>" aria-label="<?php echo esc_attr( $heading ? $heading : __( 'Intro', 'elm-risk-solutions' ) ); ?>">

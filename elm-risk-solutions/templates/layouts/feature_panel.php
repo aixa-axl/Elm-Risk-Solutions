@@ -16,7 +16,7 @@ if ( ! $background && ! $heading && ! $body && empty( $link['url'] ) ) {
 	return;
 }
 
-$cta_class = 'inline-flex min-h-[55px] items-center justify-center bg-ink px-8 py-4 text-center font-sans text-nav-cta uppercase leading-tight text-white no-underline transition-opacity hover:opacity-90 lg:min-w-[280px] lg:px-10 lg:py-0';
+$cta_class = 'inline-flex min-h-[55px] items-center justify-center bg-ink px-8 py-4 text-center font-sans text-nav-cta uppercase leading-tight text-white no-underline transition-colors duration-200 hover:bg-ink-hover lg:min-w-[280px] lg:px-10 lg:py-0';
 ?>
 
 <section

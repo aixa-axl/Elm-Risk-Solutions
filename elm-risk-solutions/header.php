@@ -12,7 +12,7 @@ $primary_cta = function_exists( 'get_field' ) ? get_field( 'header_primary_cta',
 $has_acf_nav = is_array( $header_nav ) && ! empty( $header_nav );
 
 $nav_link_class = 'font-sans text-nav-link text-ink no-underline transition-opacity hover:opacity-70';
-$cta_class      = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-cta px-6 font-sans text-nav-cta uppercase text-white no-underline transition-opacity hover:opacity-90';
+$cta_class      = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-cta px-6 font-sans text-nav-cta uppercase text-white no-underline transition-colors duration-200 hover:bg-cta-hover';
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

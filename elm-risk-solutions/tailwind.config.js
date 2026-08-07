@@ -8,11 +8,14 @@ module.exports = {
       colors: {
         'site-bg': '#FFFFFF',
         ink: '#18243A',
+        'ink-hover': '#101828',
         cream: '#F4F0E9',
         muted: '#5C5C5C',
         accent: '#8D8175',
         cta: '#8D8175',
+        'cta-hover': '#72675C',
         'header-rule': '#A12F5C',
+        'header-rule-hover': '#86264C',
       },
       fontFamily: {
         // Self-hosted in assets/fonts/ via @font-face in src/input.css
