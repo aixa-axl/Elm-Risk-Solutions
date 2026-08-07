@@ -1828,6 +1828,16 @@ body {
   opacity: 0.7;
 }
 
+.hover\:z-10:hover {
+  z-index: 10;
+}
+
+.hover\:scale-\[1\.03\]:hover {
+  --tw-scale-x: 1.03;
+  --tw-scale-y: 1.03;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:bg-cta-hover:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(114 103 92 / var(--tw-bg-opacity, 1));

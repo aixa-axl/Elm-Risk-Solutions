@@ -55,7 +55,7 @@ $cta_class = 'inline-flex h-[55px] min-w-[172px] items-center justify-center bg-
 					$card_bg     = $is_dark ? 'bg-ink' : 'bg-cta';
 					$link_title  = ! empty( $link['title'] ) ? $link['title'] : __( 'Explore our solutions →', 'elm-risk-solutions' );
 					?>
-					<li class="<?php echo esc_attr( $card_bg ); ?> flex flex-col p-6 text-white lg:p-8">
+					<li class="<?php echo esc_attr( $card_bg ); ?> relative flex flex-col p-6 text-white transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.03] lg:p-8">
 						<?php if ( $image ) : ?>
 							<div class="aspect-square w-full overflow-hidden">
 								<?php
