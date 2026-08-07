@@ -66,6 +66,8 @@
 
 	/**
 	 * Subtle fade-in as sections enter the viewport.
+	 * Tall sections (e.g. legal/privacy) skip the fade — threshold-based
+	 * observers never fire when a section is taller than the viewport.
 	 */
 	function initScrollReveal() {
 		const prefersReduced =
@@ -94,12 +96,18 @@
 			},
 			{
 				root: null,
-				rootMargin: '0px 0px -8% 0px',
-				threshold: 0.12,
+				rootMargin: '0px 0px -40px 0px',
+				threshold: 0,
 			}
 		);
 
 		sections.forEach(function (section) {
+			// Long legal/policy pages: show immediately (no fade).
+			if (section.classList.contains('ers-legal-content')) {
+				section.classList.add('ers-reveal', 'is-visible');
+				return;
+			}
+
 			section.classList.add('ers-reveal');
 			observer.observe(section);
 		});
