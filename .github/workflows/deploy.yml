@@ -26,11 +26,21 @@ jobs:
         run: npm run build
         working-directory: elm-risk-solutions
 
-      - name: Deploy theme to WP Engine
+      - name: Deploy theme to WP Engine staging
         uses: wpengine/github-action-wpe-site-deploy@v3
         with:
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
           WPE_ENV: elmrisksolustg
+          SRC_PATH: "elm-risk-solutions/"
+          REMOTE_PATH: "wp-content/themes/elm-risk-solutions/"
+          FLAGS: -avz --inplace --delete --exclude-from=elm-risk-solutions/.deployignore
+          CACHE_CLEAR: true
+
+      - name: Deploy theme to WP Engine production
+        uses: wpengine/github-action-wpe-site-deploy@v3
+        with:
+          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
+          WPE_ENV: elmrisksolutio
           SRC_PATH: "elm-risk-solutions/"
           REMOTE_PATH: "wp-content/themes/elm-risk-solutions/"
           FLAGS: -avz --inplace --delete --exclude-from=elm-risk-solutions/.deployignore

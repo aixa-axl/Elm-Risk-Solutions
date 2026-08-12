@@ -1,11 +1,12 @@
 # Elm Risk Solutions
 
-WordPress theme: **ACF Flexible Content** + **Tailwind CSS** + **GitHub Actions ? WP Engine** (`elmrisksolustg`).
+WordPress theme: **ACF Flexible Content** + **Tailwind CSS** + **GitHub Actions ? WP Engine** (`elmrisksolustg` staging, `elmrisksolutio` production).
 
-Build against **staging only** ? no Local by Flywheel. Pattern matches impact-one-million / yellow-bolts for the stack only; **do not copy IOM layouts**.
+Build against **staging** for day-to-day work ? no Local by Flywheel. Pattern matches impact-one-million / yellow-bolts for the stack only; **do not copy IOM layouts**.
 
 **Figma (AXL):** https://www.figma.com/design/dG9NKdUN3mJ3uVcnQUlAkY/Elm-Risk-Wireframes  
-**Staging:** `https://elmrisksolustg.wpengine.com` (WP Admin from the WP Engine dashboard)
+**Staging:** `https://elmrisksolustg.wpengine.com` (WP Admin from the WP Engine dashboard)  
+**Production:** `https://elmrisksolutio.wpengine.com` (env name `elmrisksolutio`)
 
 ---
 
@@ -23,8 +24,8 @@ That moves the deploy key into `~/.ssh`, places Cursor conventions under `.curso
 
 ## 1. WP Engine SSH + first deploy path
 
-1. Confirm staging env name: **`elmrisksolustg`**.
-2. WP Engine ? your user profile ? **SSH Keys** ? add the public key (`~/.ssh/wpe_ers_deploy.pub` ? printed by the bootstrap script).
+1. Confirm env names: staging **`elmrisksolustg`**, production **`elmrisksolutio`**.
+2. WP Engine ? your user profile ? **SSH Keys** ? add the public key (`~/.ssh/wpe_ers_deploy.pub` ? printed by the bootstrap script). Same key must be authorized for both environments.
 3. Wait for key propagation (often a few minutes).
 
 ---
@@ -40,7 +41,7 @@ That moves the deploy key into `~/.ssh`, places Cursor conventions under `.curso
 | `WPE_SSHG_KEY_PRIVATE` | Full contents of `~/.ssh/wpe_ers_deploy` (private key, including `BEGIN`/`END` lines) |
 
 4. Push to `main` (or run **Deploy to WP Engine** via Actions ? workflow_dispatch).
-5. Workflow builds Tailwind and rsyncs `elm-risk-solutions/` ? `wp-content/themes/elm-risk-solutions/` on **`elmrisksolustg`**.
+5. Workflow builds Tailwind and rsyncs `elm-risk-solutions/` ? `wp-content/themes/elm-risk-solutions/` on **`elmrisksolustg`** (staging) then **`elmrisksolutio`** (production).
 
 ---
 
@@ -71,7 +72,7 @@ npm run build # or watch while editing tokens/CSS source
 ```
 
 1. Implement a Figma section in Cursor ? `templates/layouts/{name}.php` + ACF JSON.
-2. Commit + push to `main` ? GitHub Actions deploys to `elmrisksolustg`.
+2. Commit + push to `main` ? GitHub Actions deploys to staging (`elmrisksolustg`) and production (`elmrisksolutio`).
 3. Staging WP Admin ? Sync field group if new ? edit page / Theme Settings ? view staging URL.
 
 Figma MCP: AXL team file, select a frame, implement as ACF layout. Preview on staging after each push.
@@ -84,6 +85,6 @@ Figma MCP: AXL team file, select a frame, implement as ACF layout. Preview on st
 - [ ] SSH public key on WP Engine
 - [ ] `WPE_SSHG_KEY_PRIVATE` set in GitHub
 - [ ] `npm run build` succeeds
-- [ ] First push to `main` deploys to `elmrisksolustg`
+- [ ] First push to `main` deploys to `elmrisksolustg` and `elmrisksolutio`
 - [ ] Theme activated on staging
 - [ ] ACF Pro installed + licensed; field groups synced

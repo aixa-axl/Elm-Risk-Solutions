@@ -8,7 +8,7 @@ alwaysApply: true
 Custom WordPress theme. Tailwind CSS v3 + ACF Pro Flexible Content. Pattern matches impact-one-million / yellow-bolts. No page builders, no jQuery.
 
 Figma (AXL team): https://www.figma.com/design/dG9NKdUN3mJ3uVcnQUlAkY/Elm-Risk-Wireframes
-WP Engine staging env: `elmrisksolustg` ? develop against staging only (no Local).
+WP Engine staging env: `elmrisksolustg` ? develop against staging (no Local). Production: `elmrisksolutio` (deploys with staging on push to `main`).
 
 **Do not copy Impact One Million layouts, header, or visual design.** Reuse only the stack and conventions.
 
